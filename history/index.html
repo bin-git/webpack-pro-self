@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>{site.seo_title}</title>
+	<meta name="Keywords" content="{site.seo_keyword}" />
+	<meta name="Description" content="{site.seo_description}" />
+	  <script>
+    function Rem(){
+      var oHtmlElem = document.documentElement,nWinWid = oHtmlElem.clientWidth / 7.5;
+      if(nWinWid > 100)nWinWid = 100;
+      oHtmlElem.style.fontSize = nWinWid + 'px';
+    }
+    window.addEventListener('resize', Rem, false);
+    Rem();
+  </script>
+	
+</head>
+<script src="js/bundle.js"></script>
+<script>
+	oUrl = '{config.webpath}plugins/feedback/ajax.ashx?action=add_no&site={site.id}&rnd=';
+	sPageNames = '{site.company}';
+</script>
+<body>
+	<!-- 注册页面 -->
+	<div guodu class="itop">
+		<div class="wrap clearfix">
+			<a href="<%linkurl("index")%>">
+				<img src="{site.logo}" alt="{site.company}" class="logo fl" aos="fade-right"></a>
+				<div class="itel fr zhubg_color fz14" aos="fade-left">
+					<h5 class="fwn fz16">7x24小时为您服务</h5>
+					<h6 class=" ">{site.mobile}</h6>
+				</div>
+			</div>
+		</div>
+
+		<!-- xianav -->
+		<div class="xiaNav ">
+			<div class="wrap clearfix">
+				<div class="left fl">全部服务分类</div>
+				<div class="inavT fr">
+					<ul class="fl" id="inav">
+						<li class="curr">
+							<a href="<%linkurl("index")%>" title="网站首页">网站首页</a>
+						</li>
+						<li class="">
+							<a href="" target="_black" title="工商注册">工商注册</a>
+						</li>
+						<li>
+							<a href="" target="_black" title="工商注册">工商注册</a>
+						</li>
+						<li>
+							<a href="" target="_black" title="工商注册">工商注册</a>
+						</li>
+						<li>
+							<a href="" target="_black" title="工商注册">工商注册</a>
+						</li>
+						<li>
+							<a href="" target="_black" title="工商注册">工商注册</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- banenr -->
+		<div class="ibanner">
+			<div class="wrap">
+				<a  href="http://p.qiao.baidu.com/cps/chat?siteId=13857090&userId=27486220" target="_black"  class="bnlink"></a>
+				<div class="ibnNav">
+					<div class="box">
+						<dl class="clearfix" aos="fade-up">
+							<dt class="fl">工商服务</dt>
+							<dd class="fl"><a href="http://p.qiao.baidu.com/cps/chat?siteId=13857090&userId=27486220" target="_black" class="disb">工商注册</a></dd>
+							<dd class="fl"><a href="http://p.qiao.baidu.com/cps/chat?siteId=13857090&userId=27486220" target="_black" class="disb">工商变更</a></dd>
+							<dd class="hidden dorp box_sizing">
+								<h1 class="fwn">工商服务-创业/改变第一步：工商注册与变更</h1>
+								<a href="" target="_black" class="fwn clearfix">
+									<span class="fl">公司注册</span>   
+									<font class="fr">咨询详情</font>
+								</a>
+								<a href="" target="_black" class="fwn clearfix">
+									<span class="fl">公司注销</span>
+									<font class="fr">咨询详情</font>
+								</a>
+								<a href="" target="_black" class="fwn clearfix">
+									<span class="fl">工商换照</span>
+									<font class="fr">咨询详情</font>
+								</a>
+								<a href="" target="_black" class="fwn clearfix">
+									<span class="fl">地址变更</span>
+									<font class="fr">咨询详情</font>
+								</a>
+								<a href="" target="_black" class="fwn clearfix">
+									<span class="fl">名称变更</span>
+									<font class="fr">咨询详情</font>
+								</a>
+								<a href="" target="_black" class="fwn clearfix">
+									<span class="fl">工商年检 </span>
+									<font class="fr">咨询详情</font>
+								</a>
+								<a href="" target="_black" class="fwn clearfix">
+									<span class="fl">经营范围变更</span>
+									<font class="fr">咨询详情</font>
+								</a>
+								<a href="" target="_black" class="fwn clearfix">
+									<span class="fl">公司股东及资金变更</span>
+									<font class="fr">咨询详情</font>
+								</a>
+
+							</dd>
+						</dl>
+						<dl class="clearfix" aos="fade-up" aos-delay="100">
+							<dt class="fl">代理记账</dt>
+							<dd class="fl"><a href="http://p.qiao.baidu.com/cps/chat?siteId=13857090&userId=27486220" target="_black" class="disb">代理记账</a></dd>
+							<dd class="fl"><a href="http://p.qiao.baidu.com/cps/chat?siteId=13857090&userId=27486220" target="_black" class="disb">旧账梳理</a></dd>
+							<dd class="hidden dorp box_sizing">
+								<h1 class="fwn">中小企业的长期合作模式，让专业辅助您的成功</h1>
+								<a href="" target="_black" class="fwn clearfix">
+									<span class="fl">小规模</span>   
+									<font class="fr">咨询详情</font>
+								</a>
+								<a href="" target="_black" class="fwn clearfix">
+									<span class="fl">一般纳税人</span>
+									<font class="fr">咨询详情</font>
+								</a>
+								<a href="" target="_black" class="fwn clearfix">
+									<span class="fl">旧账梳理</span>
+									<font class="fr">咨询详情</font>
+								</a>
+							</dd>
+						</dl>
+						<dl class="clearfix" aos="fade-up" aos-delay="200">
+							<dt class="fl">财税服务</dt>
+							<dd class="fl"><a href="http://p.qiao.baidu.com/cps/chat?siteId=13857090&userId=27486220" target="_black" class="disb">税务报表</a></dd>
+							<dd class="fl"><a href="http://p.qiao.baidu.com/cps/chat?siteId=13857090&userId=27486220" target="_black" class="disb">税务咨询</a></dd>
+							<dd class="hidden dorp box_sizing">
+								<h1 class="fwn">低价高质的财税服务，让企业在财税领域没有难题</h1>
+								<a href="" target="_black" class="fwn clearfix">
+									<span class="fl">代理税务</span>   
+									<font class="fr">咨询详情</font>
+								</a>
+								<a href="" target="_black" class="fwn clearfix">
+									<span class="fl">顾问式财税</span>
+									<font class="fr">咨询详情</font>
+								</a>
+
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- 工商服务 -->
+		<div class="iserverce">
+			<div class="wrap">
+				<div class="ndailiForm wrap clearfix">
+					<div class="left">
+						<h2 class="line_h_1">线上申请，办理更快捷</h2>
+						<p class="fz16">请留下您的联系方式，我们将尽快与您联系</p>
+					</div>
+					<div class="dbBox fr" id="iforms1">
+						
+						<ul class="ndlradioBox" id="otherBpx">
+							<li class="clearfix item">
+								<font class="fl titl">业务类型：</font>
+								<span class="fl curr valu">工商注册</span>
+								<span class="fl valu">代理记账</span>
+								<span class="fl valu">财税服务</span>
+								<span class="fl valu">公司注销</span>
+								<span class="fl valu">公司核名</span>
+							</li>
+						</ul>
+						<div class="formBox clearfix">
+							<input type="text" class="txt man inpName" placeholder="请输入您的称呼">
+							<input type="text" class="txt tel inpTel" placeholder="请输入您的电话号码">
+							<input type="text" class="txt adr inpAddr" placeholder="请输入所在城市名称">
+							<textarea placeholder="请输入备注信息"></textarea>
+							<input type="button" class="button messageBtn" value="立即申请">
+						</div>
+					</div>
+				</div>
+				
+
+				<div class="iadrs">
+					<div class="ythTitl">
+						<h2><span class="zhu_color"></span>覆盖全国100+城市服务站点</h2>
+						<h3 class="fwn">已服务全国各地100多个城市</h3>
+					</div>
+					<div class="textBox">
+						<img src="images/adrsImg.png" alt="" class
+						disb m0auto>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+
+		<!-- liucheng -->
+		<div class="iliuchengs">
+			<div class="wrap">
+				<div class="ythTitl">
+					<h2><span class="zhu_color"></span>注册公司流程</h2>
+					<h3 class="fwn">简单4步，轻松办理</h3>
+				</div>
+				<img src="images/liuchen.png" class="disb m0auto" aos="fade-up">
+			</div>
+		</div>
+		<!--资料-->
+
+		<div class="idata">
+			<div class="wrap clearfix">
+				<div class="left fl">
+					<div id="mao4"></div>
+					<h1 class="titl2 ">需您提供的资料</h1>
+					<ul class="list">
+						<li><span>1</span>
+							<p>公司名称
+								<font>（XX市+字号+行业+有限公司）</font>
+							</p>
+						</li>
+						<li><span>2</span>
+							<p>法人及全体股东身份证信息
+								<font>（身份证姓名、地 址、身份证号）</font>
+							</p>
+						</li>
+
+						<li><span>3</span>
+							<p>经营范围
+								<font>（我司可提供同行业参考）</font>
+							</p>
+						</li>
+						<li><span>4</span>
+							<p>注册地址
+								<font>（可提供商务秘书地址）</font>
+							</p>
+						</li>
+					</ul>
+					<img src="images/shenfenzheng.jpg" alt="" class="shenfenzheng" />
+				</div>
+				<div class="right fr">
+					<h1 class="titl2 ">办理完得到的资料</h1>
+					<ul class="list">
+						<li><span>1</span>
+							<p>营业执照正副本
+								<font>（多证合一）</font>
+							</p>
+						</li>
+						<li><span>2</span>
+							<p>公司公章、法人私章、财务章</p>
+						</li>
+						<li><span>3</span>
+							<p>公司章程</p>
+						</li>
+						<li><span>4</span>
+							<p>纳税人申报纳税须知</p>
+						</li>
+						<li><span>5</span>
+							<p>企业统一社会信用代码证明</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- nwenti -->
+		<div class="nwenti">
+			<div class="wrap">
+				<table aos="fade-up">
+					<tr>
+						<td>
+							<h2 class="fwn"><span class="con q">Q</span>1.我没有注册地址怎么办？</h2>
+							<h3 class="fwn"><span class="con a">A</span>我们可以免费提供注册地址</h3>
+						</td>
+						<td>
+							<h2 class="fwn"><span class="con q">Q</span>2.如何确定公司的经营范围？</h2>
+							<h3 class="fwn"><span class="con a">A</span>我们提供公司范围查询</h3>
+						</td>
+						<td>
+							<h2 class="fwn"><span class="con q">Q</span>3.一个地址能注册多个公司吗？</h2>
+							<h3 class="fwn"><span class="con a">A</span>不可以</h3>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2 class="fwn"><span class="con q">Q</span>4.公司取名需要注意什么？</h2>
+							<h3 class="fwn"><span class="con a">A</span>建议两个字为佳，我们提供核名查询</h3>
+						</td>
+						<td>
+							<h2 class="fwn"><span class="con q">Q</span>5.注册资金100万需要一次缴清吗？</h2>
+							<h3 class="fwn"><span class="con a">A</span>不需要，2015年3月实施注册资本认缴制</h3>
+						</td>
+						<td>
+							<h2 class="fwn"><span class="con q">Q</span>6.营业执照最快多久拿到？</h2>
+							<h3 class="fwn"><span class="con a">A</span>上海注册3-15个工作日</h3>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2 class="fwn"><span class="con q">Q</span> 7.注册地址没有租赁合同怎么办？</h2>
+							<h3 class="fwn"><span class="con a">A</span>我们提供注册地址，提供租赁合同</h3>
+						</td>
+						<td>
+							<h2 class="fwn"><span class="con q">Q</span>8.注册过公司还能重新注册吗？</h2>
+							<h3 class="fwn"><span class="con a">A</span>需要办理注销后才能重新注册</h3>
+						</td>
+						<td>
+							<h2 class="fwn"><span class="con q">Q</span>9. 注册公司需要本人到场吗？</h2>
+							<h3 class="fwn"><span class="con a">A</span>由我们全程办理，不需要本人来回奔波</h3>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<!-- liucheng -->
+		<div class="isliucheng">
+			<div class="wrap">
+				<div class="ythTitl">
+					<h2><span class="zhu_color"></span>记账报税流程</h2>
+					<h3 class="fwn">安全快捷，有保障</h3>
+				</div>
+				<div class="teseBox">
+					<ul class="list" guodu>
+
+						<li aos="fade-up">
+							<div class="box">
+								<img src="images/zxwenti1.jpg" alt="">
+								<p><span>自动获取发票</span>开具公司抬头发票即可（无
+									需人工交付给，我们会在系
+									统自动调取）</p>
+								</div>
+							</li>
+							<li aos="fade-up" aos-delay="100">
+								<div class="box">
+									<img src="images/zxwenti2.jpg" alt="">
+									<p><span>会计记账</span>使用市场最领先的金财代账
+										软件确保数据安全快捷</p>
+									</div>
+								</li>
+								<li aos="fade-up" aos-delay="150">
+									<div class="box">
+										<img src="images/zxwenti3.jpg" alt="">
+										<p><span>会计师审查</span>10年以上专业会计师审核把
+											关，保障数据0失误</p>
+										</div>
+									</li>
+									<li aos="fade-up" aos-delay="200">
+										<div class="box">
+											<img src="images/zxwenti4.jpg" alt="">
+											<p><span>纳税申报</span>代账软件自动高效申报加资
+												深财务人员人工审核确保工
+												作圆满完成</p>
+											</div>
+										</li>
+
+
+
+									</ul>
+								</div>
+
+								<!-- youshi -->
+								<div class="iyoushisss">
+									<div class="ythTitl">
+										<h2><span class="zhu_color"></span>找我们做代理记账的优势</h2>
+										<h3 class="fwn">收费透明，数据安全</h3>
+									</div>
+									<div class="Box clearfix">
+										<img class="left fl" src="images/yw.png" aos="fade-right">
+
+										<div class="right fr" aos="fade-left">
+											<h1 class="fz24 fwn line_h_1">
+												明码标价
+												<p class="fz18 line_h_1">
+													官方明码标价，收费透明，无任何其他隐形收费，无限制区域行业
+												</p>
+											</h1>
+											<h1 class="fz24 fwn line_h_1">
+												正版高效专业软件
+												<p class="fz18 line_h_1">
+													使用正版金财代账专业软件，记帐速度快，发票自动系统调取，无需
+													人工收集、自动一件报税，数据安全有保障
+												</p>
+											</h1>
+											<h1 class="fz24 fwn line_h_1">
+												责任赔付
+												<p class="fz18 line_h_1">
+													郑重承诺，如因我司财务咨询会计失职造成的税方面的责任（补税和
+													罚款） 我司无条件第一时间全额赔付
+												</p>
+											</h1>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="ndlservBox">
+									<div class="ythTitl">
+										<h2><span class="zhu_color"></span>常见问题</h2>
+										<h3 class="fwn">有疑问？不知道怎么办？看这里</h3>
+									</div>
+									<dl guodu class="list clearfix">
+
+										<dd class="fl" aos="fade-up" aos-delay="100">
+											<div class="box">
+												<span class="cont fz20 colorfff">工商注册常见问题</span>
+												<div class="text ">
+													<div class="wenb fz18" style="color:#888888">
+														<h6 class="fwn clearfix">
+															1、哪些人可以注册公司？                                         <a href="" target="_black" class="fr" href="" target="_black">免费咨询</a></h6>
+															<h6 class="fwn clearfix">2、注册资金多少有什么区别？                                  <a href="" target="_black" class="fr" href="" target="_black">免费咨询</a></h6>
+															<h6 class="fwn clearfix">3、如何选定经营范围？                                            <a href="" target="_black" class="fr" href="" target="_black">免费咨询</a></h6>
+															<h6 class="fwn clearfix">4、怎么变更公司信息？                                            <a href="" target="_black" class="fr" href="" target="_black">免费咨询</a></h6>
+															<h6 class="fwn clearfix">5、没地址怎么注册？                                               <a href="" target="_black" class="fr" href="" target="_black">免费咨询</a></h6>
+															<h6 class="fwn clearfix">6、银行开户有什么需求？                                         <a href="" target="_black" class="fr" href="" target="_black">免费咨询</a></h6>
+															<h6 class="fwn clearfix">7、注册公司需要多少钱？                                         <a href="" target="_black" class="fr" href="" target="_black">免费咨询</a></h6>
+															<h6 class="fwn clearfix">8、注册公司需要哪些资料？                                      <a href="" target="_black" class="fr" href="" target="_black">免费咨询</a></h6>
+															<h6 class="fwn clearfix">9、注册公司一般需要多长时间？                               <a href="" target="_black" class="fr" href="" target="_black">免费咨询</a></h6>
+															<h6 class="fwn clearfix">10、注册公司没有注册资本怎么办？                          <a href="" target="_black" class="fr" href="" target="_black">免费咨询</a></h6>
+														</h6>
+													</div>
+												</div>
+											</div>
+										</dd>
+
+										<dd class="fl" aos="fade-up" aos-delay="100">
+											<div class="box">
+												<span class="cont fz20 colorfff">代理记账常见问题</span>
+												<div class="text ">
+													<div class="wenb fz18" style="color:#888888">
+														<h6 class="fwn clearfix">1、注册公司后需要马上交税吗？<a href="" target="_black" class="fr" href="" target="_black">免费咨询</a></h6>
+														<h6 class="fwn clearfix">2、代理记账每个月需要多少钱？                                  <a href="" target="_black" class="fr" href="" target="_black">免费咨询</a></h6>
+														<h6 class="fwn clearfix">3、国税和地税有什么区别？                                            <a href="" target="_black" class="fr" href="" target="_black">免费咨询</a></h6>
+														<h6 class="fwn clearfix">4、小规模和一般纳税人有什么分别？                                          <a href="" target="_black" class="fr" href="" target="_black">免费咨询</a></h6>
+														<h6 class="fwn clearfix">5、公司代理记账主要有哪些内容？                                              <a href="" target="_black" class="fr" href="" target="_black">免费咨询</a></h6>
+														<h6 class="fwn clearfix">6、如何选择代理记账公司？                                              <a href="" target="_black" class="fr" href="" target="_black">免费咨询</a></h6>
+														<h6 class="fwn clearfix">7、代理记账的内容和服务流程有哪些？                                          <a href="" target="_black" class="fr" href="" target="_black">免费咨询</a></h6>
+														<h6 class="fwn clearfix">8、公司注册后什么条件可以注册一般纳税人？                                       <a href="" target="_black" class="fr" href="" target="_black">免费咨询</a></h6>
+														<h6 class="fwn clearfix">9、如何申请认定一般纳税人资格？                                 <a href="" target="_black" class="fr" href="" target="_black">免费咨询</a></h6>
+														<h6 class="fwn clearfix">10、代理记账有哪些好处？                                 <a href="" target="_black" class="fr" href="" target="_black">免费咨询</a></h6>
+													</h6>
+												</div>
+											</div>
+										</div>
+									</dd>
+
+								</dl>
+							</div>
+
+							<!-- warp end -->
+
+						</div>
+					</div>
+
+
+					<!-- ifooter -->
+
+					<div class="ifoots">
+						<div class="wrap clearfix">
+							<div class="left fl fu_color">
+								<h2 class="fz20">业务项目</h2>
+								<h3 class="fwn fz16">
+									工商注册、代理记账、财税服务</h3>
+									<h2 class="fz20">联系方式</h2>
+									<h4 class="clearfix">
+										<img src="{site.wxcode}" class="fr" alt="">
+										{site.mobile}
+										<p class="line_h_1">
+											地址：{site.address}
+										</p>
+										<p>
+											{site.copyright}
+										</p>
+
+									</h4>
+								</div>
+								<div class="right ndailiForm fr" id="iforms2">
+									<h2 class=" fz20">在线留言</h2>
+									<div class="formBox clearfix">
+										<input type="text" class="txt man inpName" placeholder="请输入您的称呼">
+										<input type="text" class="txt tel inpTel" placeholder="请输入您的电话号码">
+										<input type="text" class="txt adr inpAddr" placeholder="请输入所在城市名称">
+										<textarea placeholder="请输入备注信息"></textarea>
+										<input type="button" class="button messageBtn" value="立即申请">
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- mesage -->
+						<div class="iMessagefixed">恭喜！申请成功！</div>
+						<style>
+							.iMessagefixed{ display: none;
+								width: 300px;text-align: center; border-radius: 10px;font-size: 18px; color:red;
+								position: fixed;top: 300px;left: 50%;margin-left: -150px;padding: 20px;
+								background: #FFFFFF;box-shadow: 0px 0px 18px rgba(0,0,0,0.2);*border: 1px solid #c2c2c2;z-index: 999;
+							}
+						</style>
+					</body>
+
+					<script>AOS.init({
+						easing: 'ease-out-back',
+						duration: 1000
+					});</script>
+
+
+
+					</html>

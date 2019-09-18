@@ -1,0 +1,2788 @@
+@import "common";
+
+$zhu_color: #fa8032;
+$fu_color: #7e85a5;
+@mixin bgurl($bgName, $bgLeft: center, $bgTop: center) {
+  background: url("../images/"+$bgName) no-repeat $bgLeft $bgTop;
+}
+
+.itop {
+  height: 0.9rem;
+  background: #fff;
+  display: flex;
+}
+.itop .logo {
+  margin-top: 0.25rem;
+}
+
+.itop .itel {
+  padding-top: 0.2rem;
+  background: #fff;
+  text-align: right;
+  h5 {
+    line-height: 1;
+    color: #67686b;
+    font-size: 0.16rem;
+  }
+  h6 {
+    padding-top: 0.08rem;
+    font-size: 0.25rem;
+    line-height: 1;
+  }
+}
+.itop .itel span {
+  width: 1.61rem;
+  height: 0.3rem;
+  line-height: 0.3rem;
+  background: #fff;
+  text-align: center;
+  margin-top:1pex;
+}
+.itop .itel font {
+  width: 0.8rem;
+  height: 0.32rem;
+  line-height: 0.32rem;
+  text-align: center;
+}
+
+.xiaNav {
+  height: 0.55rem;
+  line-height: 0.55rem;
+  color: #fff;
+  background: #11131c;
+  text-indent: 0.25rem;
+  border-radius: 0.02rem;
+
+  .left {
+    width: 2.55rem;
+    height: 0.55rem;
+    background: #fa8008;
+    font-size: 0.18rem;
+  }
+  .inavT {
+    width: 7.71rem;
+    li {
+      float: left;
+    }
+    a {
+      display: block;
+      width: 1.28rem;
+      height: 0.55rem;
+      color: $fu_color;
+      text-align: center;
+      transition: all 0.2s;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.xiaNav .inav {
+  padding-top: 0.29rem;
+}
+.xiaNav .inav li {
+  float: left;
+}
+.xiaNav .inav a {
+  display: block;
+  padding: 0 0.15rem;
+  font-size: 0.18rem;
+  height: 0.32rem;
+  line-height: 0.32rem;
+  text-align: center;
+}
+.xiaNav .inav a:hover,
+.xiaNav .inav li.curr a {
+  color: #fa8032;
+}
+
+/* ibanner */
+.ibanner {
+  height: 4.5rem;
+  background: url(../images/ibanner.jpg) no-repeat center #eee;
+
+  .wrap {
+    height: 4.5rem;
+    a.bnlink {
+      display: block;
+      width: 3.86rem;
+      height: 0.81rem;
+      position: absolute;
+      left: 5.28rem;
+      top: 2.6rem;
+      z-index: 3;
+    }
+  }
+}
+
+.ibnNav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2.55rem;
+  height: 4.5rem;
+  background: #0e101c;
+  color: #fff;
+  z-index: 20;
+}
+.ibnNav .box {
+  padding: 0.24rem 0.25rem 0;
+}
+.ibnNav .box dl {
+  padding-left: 0.5rem;
+  padding-bottom: 0.32rem;
+  padding-top: 0.32rem;
+
+  background: url(../images/con1.png) no-repeat left 0.33rem;
+  position: relative;
+  z-index: 21;
+  width: 1.8rem;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-bottom: 0.01rem #626263 solid;
+    left: 0;
+    bottom: 0;
+    width: 2.05rem;
+  }
+  .dorp {
+    width: 4.15rem;
+    position: absolute;
+    left: 2.3rem;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 0.24rem 0.3rem;
+    z-index: 22;
+
+    * {
+      color: #fff;
+    }
+    h1 {
+      font-size: 0.16rem;
+      line-height: 1;
+      margin-bottom: 0.24rem;
+    }
+    a {
+      display: block;
+      line-height: 0.29rem;
+      border-bottom: 0.01rem $fu_color dashed;
+      
+      &:hover * {
+        color: $zhu_color;
+      }
+    }
+  }
+  &:hover .dorp {
+    display: block;
+  }
+}
+.ibnNav .box dl:first-child + dl {
+  background: url(../images/con3.png) no-repeat left 0.33rem;
+}
+.ibnNav .box dl:first-child + dl + dl {
+  background: url(../images/con2.png) no-repeat left 0.33rem;
+}
+.ibnNav .box dl dt {
+  width: 100%;
+}
+.ibnNav .box dl dd {
+  margin-right: 0.1rem;
+}
+
+.ibnNav .box dl dd a {
+  color: #d5d5d5;
+  
+}
+/* iadvs */
+.iadvs {
+  background: #fff;
+  padding: 0.24rem 0;
+}
+.iadvs .item {
+  width: 2.84rem;
+}
+.iadvs .item2 {
+  margin: 0 1.5rem;
+}
+.iadvs .item img {
+  margin-right: 0.1rem;
+}
+.iadvs h2 {
+  font-size: 0.25rem;
+  line-height: 1.6;
+}
+.iadvs h3 {
+  font-size: 0.18rem;
+  line-height: 1.2;
+}
+/* igongyTit */
+.igongyTit {
+  line-height: 0.4rem;
+  height: 0.42rem;
+}
+.igongyTit h6 {
+  font-size: 0.4rem;
+}
+.igongyTit span {
+  line-height: 0.56rem;
+}
+/* iserverce */
+.iserverce {
+  background: #f6f6f7;
+  padding-top: 0.8rem;
+}
+.iserverce .ifuwuBox {
+  padding-top: 0.2rem;
+  padding-bottom: 0.76rem;
+}
+/* iserverLeft */
+.iserverLeft {
+  width: 2.85rem;
+  height: 3.67rem;
+  background: url(../images/server1.png) no-repeat;
+}
+.iserverLeft .box {
+  padding: 0.46rem 0.38rem 0;
+}
+.iserverLeft h2 {
+  font-size: 0.35rem;
+  line-height: 1;
+  padding-bottom: 0.3rem;
+  position: relative;
+}
+.iserverLeft h2:after {
+  content: "";
+  display: block;
+  width: 0.44rem;
+  height:1pex;
+  background: #b3b4d1;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.iserverLeft h3 {
+  font-size: 0.18rem;
+  color: #b3b4d1;
+  margin-top: 0.2rem;
+}
+.iserverLeft .tel {
+  font-size: 0.22rem;
+  font-weight: bold;
+  border: 0.01rem #9c9eb0 solid;
+  text-align: center;
+  width: 1.99rem;
+  height: 0.42rem;
+  line-height: 0.42rem;
+  margin-top: 0.28rem;
+}
+
+.iserverLeftKJ {
+  background: url(../images/server2.png) no-repeat;
+}
+/* iserverRit */
+.iserverRit {
+  width: 9.1rem;
+}
+/* ifuwuItem2 */
+.ifuwuItem2 {
+  width: 2.16rem;
+  height: 3.67rem;
+  background: #fff;
+  margin-left: 0.1rem;
+}
+.ifuwuItem2 h2 {
+  font-size: 0.25rem;
+  line-height: 1;
+  padding-top: 0.5rem;
+}
+.ifuwuItem2 h3 {
+  font-size: 0.18rem;
+  line-height: 2;
+  margin-top: 0.28rem;
+  height: 1.4rem;
+}
+.ifuwuItem2 .zixun {
+  display: block;
+  margin: 0.34rem auto 0;
+  font-size: 0.2rem;
+  border: 0.01rem #b5b5b5 solid;
+  width: 1.24rem;
+  height: 0.36rem;
+  line-height: 0.36rem;
+}
+/* ikuanjiserR */
+.ikuanjiserR {
+  width: 9rem;
+}
+.ikuanjiserR dl {
+  background: #fff;
+  height: 3.67rem;
+  line-height: 3.67rem;
+}
+.ikuanjiserR dl dd {
+  padding: 0 0.35rem;
+  border-left: 0.01rem #e2e2e4 solid;
+  line-height: 0.46rem;
+  text-align: left;
+  width: 1.14rem;
+}
+.ikuanjiserR dl dd:first-child {
+  border: none;
+}
+
+/* ikuanjiAdv */
+.ikuanjiAdv {
+  width: 3.31rem;
+  height: 3.67rem;
+  background: url(../images/ikuanjiAdv.png) no-repeat;
+}
+.ikuanjiAdv .box {
+  padding: 0.36rem 0.26rem 0;
+}
+.ikuanjiAdv h2 {
+  font-size: 0.25rem;
+  line-height: 0.32rem;
+  margin-bottom: 0.38rem;
+}
+.ikuanjiAdv h2 span {
+  font-size: 0.2rem;
+  color: #666666;
+  font-weight: normal;
+}
+.ikuanjiAdv .zixun {
+  width: 1.24rem;
+  height: 0.36rem;
+  line-height: 0.36rem;
+  border: 0.01rem #b5b5b5 solid;
+}
+.ikuanjiAdv .zixun:hover {
+  background: #ff7b0f;
+  border-color: #ff7b0f;
+  color: #fff;
+}
+/* ifuwuImte3 */
+.ifuwuImte3 {
+  width: 2.92rem;
+}
+.ifuwuImte3 h2 {
+  padding-top: 0.41rem;
+}
+.ifuwuImte3 h3 {
+  height: 2.04rem;
+  margin-top: 0.1rem;
+}
+.ifuwuImte3 .zixun {
+  margin-top: 0.2rem;
+}
+/* 财税服务 */
+.iserverLeftCS {
+  background: url(../images/server3.png) no-repeat;
+}
+
+/*iabout*/
+.iabout {
+  padding: 0.56rem 0 0;
+  background: url(../images/iaboutBg.jpg) no-repeat center top;
+}
+
+.iabout .abtBox {
+  background: #fff;
+  padding: 0.38rem;
+  height: 4.95rem;
+}
+
+.iabout .info {
+  width: 5.84rem;
+  padding-top: 0.42rem;
+}
+.iabout .info h1 {
+  font-size: 0.35rem;
+  line-height: 1;
+}
+.iabout .info h1 font {
+  display: block;
+  font-size: 0.16rem;
+  font-weight: normal;
+  line-height: 1;
+  margin-top: 0.1rem;
+}
+.iabout .text {
+  margin-top: 0.4rem;
+}
+/* iyoushi */
+.iyoushi {
+  background: #f5f5f6;
+  padding-bottom: 0.86rem;
+  padding-top: 1.33rem;
+}
+.iyoushi .wrap {
+  padding-top: 0.6rem;
+  background: #fff;
+  padding-bottom: 0.6rem;
+}
+.youshiBox {
+  padding-top: 0.42rem;
+}
+.youshiBox dd {
+  width: 1.92rem;
+  text-align: center;
+  cursor: pointer;
+  vertical-align: top;
+  margin: 0 0.2rem;
+}
+.youshiBox dd i {
+  display: block;
+  height: 0.92rem;
+  width: 0.92rem;
+  background: url(../images/iyoushi.png) no-repeat -0.45rem -0.06rem;
+  margin: 0 auto;
+}
+.youshiBox dd i.con2 {
+  background-position: -2.77rem -0.06rem;
+}
+.youshiBox dd i.con3 {
+  background-position: -5.09rem -0.06rem;
+}
+.youshiBox dd i.con4 {
+  background-position: -7.41rem -0.06rem;
+}
+.youshiBox dd i.con5 {
+  background-position: -9.73rem -0.06rem;
+}
+.youshiBox dd h2 {
+  font-size: 0.2rem;
+  line-height: 1;
+  padding-top: 0.28rem;
+  position: relative;
+  color: #151414;
+}
+.youshiBox dd h3 {
+  padding-top: 0.1rem;
+  color: #555555;
+  line-height: 1.8;
+}
+
+.youshiBox dd:hover i {
+  transform: rotateZ(360deg);
+}
+
+/* youshiTIt */
+.youshiTIt {
+  text-align: center;
+}
+.youshiTIt h2 {
+  font-size: 0.45rem;
+  line-height: 1;
+}
+.youshiTIt h3 {
+  font-size: 0.35rem;
+  color: #cccccc;
+  line-height: 1;
+  padding-top: 0.05rem;
+}
+
+/* ifooter */
+.ifooter {
+  background: #2b2e33;
+  color: #a3a1a1;
+}
+.footerTopBOx {
+  padding: 0.4rem 0 0.42rem;
+}
+.ifooter dl {
+  width: 5.8rem;
+}
+.ifooter dl dt {
+  font-size: 0.24rem;
+}
+.ifooter dl dd {
+  padding-top: 0.07rem;
+}
+.ifooter dl dd span {
+  float: left;
+  width: 2.9rem;
+}
+.ifooter .code img {
+  display: block;
+  width: 0.94rem;
+  height: 0.94rem;
+}
+.ifooter .code p {
+  padding-top: 0.03rem;
+}
+
+.footerInfor {
+  color: #6e6d6d;
+  background: #24272b;
+  line-height: 1;
+  padding: 0.18rem 0;
+}
+.footerInfor a {
+  color: #6e6d6d;
+  padding-left: 0.05rem;
+}
+
+/**************
+ ****内页风格
+ *************/
+.nzcBanner .zcForm {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -2.07rem;
+  width: 3.3rem;
+  height: 4.14rem;
+  background: #eaebed;
+  -webkit-border-radius: 0.08rem;
+  -moz-border-radius: 0.08rem;
+  border-radius: 0.08rem;
+}
+.nzcBanner .zcForm .box {
+  padding: 0.2rem;
+  padding-top: 0.38rem;
+}
+.zcForm .tit {
+  font-size: 0.2rem;
+  line-height: 1;
+}
+.zcForm .formBox {
+  margin-top: 0.2rem;
+}
+.zcForm .formBox input {
+  border: none;
+  width: 100%;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  margin-bottom: 0.1rem;
+  border-radius: 0.02rem;
+}
+.zcForm .formBox .button {
+  cursor: pointer;
+  background: #fa8032;
+  color: #fff;
+  font-size: 0.18rem;
+}
+.zcForm .formBox .button:hover {
+  background: #f1701d;
+}
+.zcForm .formBox .txt {
+  text-indent: 0.38rem;
+  font-size: 0.15rem;
+}
+.zcForm .formBox .man {
+  background: url(../images/nzc1.png) no-repeat 0.09rem center #fff;
+}
+.zcForm .formBox .adr {
+  background: url(../images/nzc2.png) no-repeat 0.09rem center #fff;
+}
+.zcForm .formBox .tel {
+  background: url(../images/nzc3.png) no-repeat 0.09rem center #fff;
+}
+
+.zcForm .lj {
+  line-height: 0.28rem;
+  padding-bottom: 0.1rem;
+  border-bottom: 0.01rem #cdcdce dashed;
+}
+
+.zcForm .listBox {
+  margin-top: 0.1rem;
+  overflow: hidden;
+  height: 0.5rem;
+  position: relative;
+}
+.zcForm .list {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.zcForm .list li {
+  font-size: 0.13rem;
+  line-height: 0.24rem;
+  height: 0.24rem;
+  overflow: hidden;
+  color: #666666;
+}
+
+.zcForm .list li span {
+  width: 2.25rem;
+}
+
+/* nadvs */
+.nadvs {
+  background: #fff;
+  padding: 0.24rem 0;
+}
+.nadvs .item {
+  width: 2.84rem;
+}
+.nadvs .item2 {
+}
+.nadvs .item img {
+}
+.nadvs h2 {
+  font-size: 0.2rem;
+  color: #333;
+  line-height: 1;
+  padding-left: 0.6rem;
+}
+.nadvs h3 {
+  color: #666666;
+  line-height: 1.5;
+  padding-left: 0.6rem;
+  padding-top: 0.05rem;
+}
+
+/* iyoushi1 */
+.iyoushi1 {
+  height: 7.99rem;
+  background: url(../images/zcbg1.jpg) no-repeat center;
+}
+.iyoushi1 .wrap {
+  padding-top: 0.75rem;
+}
+.iyoushi1 .youshi1Box {
+  width: 11.76rem;
+  margin: 0 auto;
+  height: 6.48rem;
+  background: url(../images/zcbg2.png) no-repeat center;
+}
+.youshi1Box .datafor {
+  width: 5.76rem;
+  height: 6.48rem;
+  position: relative;
+  overflow: hidden;
+}
+.youshi1Box .datafor .man {
+  position: absolute;
+}
+.youshi1Box .left .man {
+  width: 2.63rem;
+  height: 5.37rem;
+  right: -0.08rem;
+  bottom: 0;
+  background: url(../images/zcleftren.png) no-repeat;
+}
+.youshi1Box .right .man {
+  width: 2.46rem;
+  height: 3.75rem;
+  right: 0.07rem;
+  bottom: 0;
+  background: url(../images/zcrightren.png) no-repeat;
+}
+
+.youshi1Box .datafor .box {
+  padding: 0.36rem;
+}
+.youshi1Box .datafor h1 {
+  font-size: 0.3rem;
+  color: #333333;
+  line-height: 1.2;
+}
+.youshi1Box .datafor .list {
+  padding-top: 0.1rem;
+}
+.youshi1Box .left .list li {
+  height: 0.5rem;
+  line-height: 0.5rem;
+  border-bottom: 0.01rem #dcdcdc dashed;
+}
+.youshi1Box .left .list li:last-child {
+  border-bottom: none;
+}
+.youshi1Box .right .box {
+  padding-left: 0.67rem;
+}
+.youshi1Box .right .list {
+  width: 4.1rem;
+  padding-top: 0.23rem;
+}
+.youshi1Box .right li {
+  height: 0.45rem;
+  line-height: 0.45rem;
+  padding-left: 0.4rem;
+  background: url(../images/gougou.png) no-repeat 0.11rem center;
+  border: 0.01rem #dcdcdc solid;
+  border-radius: 0.03rem;
+  margin-bottom: 0.18rem;
+}
+.youshi1Box .tel {
+  padding-left: 0.33rem;
+  padding-top: 0.48rem;
+}
+.youshi1Box .tel h2 {
+  line-height: 1.4;
+}
+.youshi1Box .tel h3 {
+  font-size: 0.35rem;
+  color: #fa8032;
+  line-height: 1;
+}
+.youshi1Box .tel .zixun {
+  display: block;
+  width: 1.48rem;
+  height: 0.46rem;
+  line-height: 0.46rem;
+  text-align: center;
+  color: #fff;
+  background: #fa8032;
+  border-radius: 0.03rem;
+  margin-top: 0.15rem;
+}
+.youshi1Box .tel .zixun:hover {
+  width: 1.55rem;
+}
+/* zcCommoTitle */
+.zcCommoTitle {
+  text-align: center;
+}
+.zcCommoTitle h2 {
+  font-size: 0.45rem;
+  color: #333333;
+  line-height: 1.1;
+}
+.zcCommoTitle h3 {
+  color: #666;
+  line-height: 1;
+  padding-top: 0.1rem;
+}
+
+/* ibiaojia */
+.ibiaojia {
+  padding: 0.88rem 0 0;
+  background: #f6f7f8;
+}
+
+.ibiaojia .list {
+  text-align: center;
+  padding-top: 0.83rem;
+}
+.ibiaojia .list li {
+  width: 3.8rem;
+  height: 4.9rem;
+  border-radius: 0.08rem;
+  background: #fff;
+  text-align: center;
+  margin: 0 0.08rem;
+}
+
+.ibiaojia li .Box {
+  padding: 0.5rem 0.52rem 0;
+}
+.ibiaojia li h6 {
+  line-height: 1;
+  font-size: 0.35rem;
+  color: #333333;
+}
+.ibiaojia li h5 {
+  color: #666666;
+  font-size: 0.24rem;
+  line-height: 1.5;
+  padding-top: 0.17rem;
+  font-weight: normal;
+}
+.ibiaojia li h4 {
+  font-size: 0.4rem;
+  color: #f1701d;
+  line-height: 1;
+  padding-top: 0.4rem;
+  font-family: arial;
+  font-weight: normal;
+}
+.ibiaojia li h4 span {
+  font-size: 0.84rem;
+  font-weight: bold;
+}
+.ibiaojia li p {
+  line-height: 0.52rem;
+  font-size: 0.24rem;
+  line-height: 1;
+  color: #666666;
+  text-decoration: line-through;
+}
+.ibiaojia li p span {
+  font-size: 0.3rem;
+  color: #ff8f00;
+}
+.ibiaojia li a.more {
+  display: block;
+  width: 1.66rem;
+  height: 0.43rem;
+  line-height: 0.43rem;
+  border-radius: 0.03rem;
+  margin: 0.55rem auto 0;
+  font-size: 0.18rem;
+}
+.ibiaojia li a.more:hover {
+  width: 1.7rem;
+  color: #fff;
+}
+
+/* izcliucheng */
+.izcliucheng {
+  padding-top: 0.96rem;
+  background: #f6f7f8;
+}
+.izcliucheng .zhuBox {
+  margin-top: 1rem;
+  height: 2.45rem;
+  background: url(../images/zhucebg.jpg) no-repeat center;
+  text-align: center;
+  color: #fff;
+}
+.izcliucheng .img {
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  top: -0.79rem;
+  height: 1.58rem;
+}
+.izcliucheng .zhuBox h5 {
+  font-size: 0.35rem;
+  line-height: 1;
+  padding-top: 1.15rem;
+}
+.izcliucheng .zhuBox h6 {
+  font-size: 0.3rem;
+  line-height: 1;
+  padding-top: 0.15rem;
+  font-weight: normal;
+}
+/*资料准备*/
+.idata {
+  overflow: hidden;
+  width: 100%;
+}
+.idata .wrap {
+  height: 5.8rem;
+}
+
+.idata .left {
+  width: 6.67rem;
+  background: #fff;
+  padding-top: 0.74rem;
+}
+.idata .right {
+  width: 8.94rem;
+  background: url(../images/idatar.jpg) no-repeat left top;
+  height: 6.79rem;
+  padding-left: 0.95rem;
+  padding-top: 0.74rem;
+  position: absolute;
+  left: 6.67rem;
+  top: 0;
+}
+.idata .titl2 {
+  font-size: 0.35rem;
+  color: #000000;
+}
+.idata .list {
+  padding-top: 0.23rem;
+}
+.idata .list li {
+  height: 0.46rem;
+  line-height: 0.46rem;
+}
+.idata .list li span {
+  float: left;
+  width: 0.26rem;
+  height: 0.26rem;
+  line-height: 0.26rem;
+  text-align: center;
+  background: #666666;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  color: #fff;
+  margin-top: 0.1rem;
+  margin-right: 0.12rem;
+  background: #2c2f42;
+}
+.idata .list li p {
+  float: left;
+  font-size: 0.2rem;
+}
+.idata .list li p font {
+  color: #fc8c43;
+}
+
+.shenfenzheng {
+  margin-top: 0.2rem;
+  margin-left: 0.25rem;
+}
+
+.idata .right .list li {
+  height: 0.4rem;
+  line-height: 0.4rem;
+}
+.idata .right .list li span {
+  margin-top: 0.07rem;
+}
+
+/*iyoushi3*/
+.iyoushi3 {
+  height: 8.73rem;
+  background: url(../images/iyoushibg.jpg) no-repeat center;
+}
+.iyoushi3 .wrap {
+  padding-top: 0.75rem;
+}
+.iyoushi3 .zcCommoTitle h2 {
+  color: #fff;
+}
+.iyoushi3 .zcCommoTitle h3 {
+  color: #cacefb;
+}
+
+.iyoushi3 .contBox {
+  margin-top: 0.35rem;
+}
+.iyoushi3 .tel {
+  font-size: 0.24rem;
+  width: 5.25rem;
+  height: 0.72rem;
+  line-height: 0.72rem;
+  -webkit-border-radius: 0.04rem;
+  -moz-border-radius: 0.04rem;
+  border-radius: 0.04rem;
+  text-align: center;
+  margin: 0.4rem auto 0;
+}
+.iyoushi3 .tel * {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: middle;
+}
+.iyoushi3 .tel span {
+  width: 0.34rem;
+  height: 0.34rem;
+  background: url(../images/tel2.png) no-repeat center;
+  margin-right: 0.11rem;
+}
+
+/*nwenti*/
+.nwenti {
+  background: #f6f6f7;
+  padding-top: 0.66rem;
+  padding-bottom: 0.8rem;
+  @include bgurl("wenda.jpg", center, top);
+  table {
+    width: 100%;
+  }
+}
+
+.nwenti {
+  .wrap {
+    padding-top: 0.58rem;
+  }
+  tr {
+    border-bottom: 0.01rem #21274c dashed;
+    td {
+      padding: 0.25rem 0.2rem 0.25rem 0;
+    }
+  }
+  h2 {
+    color: #fff;
+    font-size: 0.18rem;
+  }
+  h3 {
+    margin-top: 0.05rem;
+    line-height: 1.5;
+    color: $fu_color;
+  }
+  .con {
+    width: 0.22rem;
+    height: 0.22rem;
+    line-height: 0.22rem;
+    border-radius: 0.02rem;
+    color: #fff;
+    text-align: center;
+    margin-right: 0.11rem;
+    display: inline-block;
+    
+  }
+  .q {
+    background: $zhu_color;
+  }
+  .a {
+    background: $fu_color;
+  }
+}
+
+/*tables*/
+.tables {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+.tables tr {
+  height: 0.43rem;
+  line-height: 0.43rem;
+  border-top: 0.01rem #d2d2d2 dashed;
+}
+.tables tr:first-child {
+  border-top: none;
+}
+/*zixunBtn*/
+.maringTop37 {
+  margin-top: 0.37rem;
+}
+.zixunBtn {
+  -webkit-border-radius: 0.06rem;
+  -moz-border-radius: 0.06rem;
+  background: #f1701d;
+  border-radius: 0.06rem;
+  width: 1.85rem;
+  height: 0.45rem;
+  line-height: 0.45rem;
+}
+
+/* izczixun */
+.izczixun {
+  padding-top: 0.66rem;
+  padding-bottom: 0.98rem;
+}
+
+.izczxListBox {
+  width: 12.5rem;
+  height: 1.9rem;
+  line-height: 1.9rem;
+  margin-top: 0.47rem;
+}
+.izczxListBox dd a {
+  color: #333;
+}
+.izczxListBox dd {
+  width: 1.64rem;
+  height: 1.9rem;
+  background: #fff;
+  border-radius: 0.08rem;
+  background: url(../images/zczxbg.png) no-repeat center;
+  cursor: pointer;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  margin: 0 0.15rem;
+}
+.izczxListBox dd:hover {
+  background: url(../images/zczxbg2.png) no-repeat center;
+}
+.izczxListBox dd .text {
+  font-size: 0.2rem;
+  line-height: 1.3;
+  margin-top: 0.02rem;
+}
+.izczxListBox dd .BOx {
+  padding-top: 0.4rem;
+}
+.izczxListBox dd .con {
+  height: 0.72rem;
+}
+.izczxListBox dd .con1 {
+  background: url(../images/ZChcon1a.png) no-repeat center;
+}
+.izczxListBox dd .con2 {
+  background: url(../images/ZChcon2a.png) no-repeat center;
+}
+.izczxListBox dd .con3 {
+  background: url(../images/ZChcon3a.png) no-repeat center;
+}
+.izczxListBox dd .con4 {
+  background: url(../images/ZChcon4a.png) no-repeat center;
+}
+.izczxListBox dd .con5 {
+  background: url(../images/ZChcon5a.png) no-repeat center;
+}
+.izczxListBox dd .con6 {
+  background: url(../images/ZChcon6a.png) no-repeat center;
+}
+.izczxListBox dd:hover font {
+  color: #ffffff;
+}
+.izczxListBox dd:hover .con1 {
+  background: url(../images/ZChcon1.png) no-repeat center;
+}
+.izczxListBox dd:hover .con2 {
+  background: url(../images/ZChcon2.png) no-repeat center;
+}
+.izczxListBox dd:hover .con3 {
+  background: url(../images/ZChcon3.png) no-repeat center;
+}
+.izczxListBox dd:hover .con4 {
+  background: url(../images/ZChcon4.png) no-repeat center;
+}
+.izczxListBox dd:hover .con5 {
+  background: url(../images/ZChcon5.png) no-repeat center;
+}
+.izczxListBox dd:hover .con6 {
+  background: url(../images/ZChcon6.png) no-repeat center;
+}
+
+/*qitafuwu*/
+.qitafuwu {
+  background: url(../images/qitafuwu.jpg) no-repeat center top;
+  padding-top: 0.73rem;
+  padding-bottom: 1rem;
+}
+
+.qitafuwu .nanli .box {
+  padding: 0.2rem 0;
+  background: #ffffff;
+}
+
+/*conListBox*/
+.marginTop26 {
+  margin-top: 0.26rem;
+}
+
+.nqitafuwu {
+  padding-top: 0.66rem;
+}
+.conListBox {
+}
+.conListBox dd {
+  width: 1.8rem;
+  height: 1.8rem;
+  background: #fff;
+  -webkit-border-radius: 0.08rem;
+  -moz-border-radius: 0.08rem;
+  border-radius: 0.08rem;
+  float: left;
+  margin-left: 0.2rem;
+}
+.conListBox dd .BOx {
+  padding-top: 0.36rem;
+}
+.conListBox dd .con {
+  height: 0.72rem;
+}
+.conListBox dd .con1 {
+  background: url(../images/fw1.png) no-repeat center;
+}
+.conListBox dd .con2 {
+  background: url(../images/fw2.png) no-repeat center;
+}
+.conListBox dd .con3 {
+  background: url(../images/fw3.png) no-repeat center;
+}
+.conListBox dd .con4 {
+  background: url(../images/fw4.png) no-repeat center;
+}
+.conListBox dd .con5 {
+  background: url(../images/fw5.png) no-repeat center;
+}
+.conListBox dd .con6 {
+  background: url(../images/fw6.png) no-repeat center;
+}
+.conListBox dd a {
+  color: #333333;
+}
+.conListBox dd:hover {
+  background: #f1701d;
+}
+.conListBox dd:hover font {
+  color: #ffffff;
+}
+.conListBox dd:hover .con1 {
+  background: url(../images/fw1h.png) no-repeat center;
+}
+.conListBox dd:hover .con2 {
+  background: url(../images/fw2h.png) no-repeat center;
+}
+.conListBox dd:hover .con3 {
+  background: url(../images/fw3h.png) no-repeat center;
+}
+.conListBox dd:hover .con4 {
+  background: url(../images/fw4h.png) no-repeat center;
+}
+.conListBox dd:hover .con5 {
+  background: url(../images/fw5h.png) no-repeat center;
+}
+.conListBox dd:hover .con6 {
+  background: url(../images/fw6h.png) no-repeat center;
+}
+
+.conListBox dd .text {
+  font-size: 0.2rem;
+  line-height: 2.2;
+}
+
+/* 公司注销 */
+.nnoZxBox {
+  background: #f8f8f8;
+  padding-bottom: 0.88rem;
+}
+
+.nnoZxBox .naxxsdb {
+  height: 1.35rem;
+  background: #fff;
+  position: relative;
+  border-radius: 0.08rem;
+  top: -0.33rem;
+  overflow: hidden;
+}
+.naxxsdb .dbBox {
+  padding: 0.22rem 0.24rem 0;
+}
+.naxxsdb .dbBox h2 {
+  font-size: 0.25rem;
+  line-height: 1;
+}
+.nnoZxBox .formBox {
+  margin-top: 0.19rem;
+}
+.nnoZxBox .formBox input {
+  border: none;
+  width: 2.86rem;
+  height: 0.38rem;
+  line-height: 0.38rem;
+  margin-left: 0.2rem;
+  border-radius: 0.02rem;
+  float: left;
+}
+.nnoZxBox .formBox input:first-child {
+  margin-left: 0;
+}
+.nnoZxBox .formBox input:focus {
+  border-color: #fa8032;
+}
+.nnoZxBox .formBox .button {
+  cursor: pointer;
+  background: #fa8032;
+  color: #fff;
+  font-size: 0.18rem;
+  width: 2.24rem;
+  height: 0.4rem;
+}
+.nnoZxBox .formBox .button:hover {
+  background: #f1701d;
+}
+.nnoZxBox .formBox .txt {
+  text-indent: 0.38rem;
+  font-size: 0.15rem;
+  border: 0.01rem solid #e5e5e5;
+}
+.nnoZxBox .formBox .man {
+  background: url(../images/nzc1.png) no-repeat 0.09rem center #fff;
+}
+.nnoZxBox .formBox .adr {
+  background: url(../images/nzc2.png) no-repeat 0.09rem center #fff;
+}
+.nnoZxBox .formBox .tel {
+  background: url(../images/nzc3.png) no-repeat 0.09rem center #fff;
+}
+
+/* axhouguo */
+.axhouguo {
+  margin-top: 0.33rem;
+}
+
+.hgListBox {
+  margin-top: 0.3rem;
+}
+.hgListBox dd {
+  width: 2.24rem;
+  height: 2.24rem;
+  background: #fff;
+  border-radius: 0.05rem;
+  float: left;
+  margin-left: 0.2rem;
+}
+.hgListBox dd:first-child {
+  margin-left: 0;
+}
+.hgListBox dd .BOx {
+  padding-top: 0.5rem;
+}
+.hgListBox dd .con {
+  height: 0.74rem;
+}
+.hgListBox dd .con1 {
+  background: url(../images/zxcon1.png) no-repeat center;
+}
+.hgListBox dd .con2 {
+  background: url(../images/zxcon2.png) no-repeat center;
+}
+.hgListBox dd .con3 {
+  background: url(../images/zxcon3.png) no-repeat center;
+}
+.hgListBox dd .con4 {
+  background: url(../images/zxcon4.png) no-repeat center;
+}
+.hgListBox dd .con5 {
+  background: url(../images/zxcon5.png) no-repeat center;
+}
+.hgListBox dd a {
+  color: #333333;
+}
+.hgListBox dd:hover {
+  background: #f1701d;
+}
+.hgListBox dd:hover font {
+  color: #ffffff;
+}
+.hgListBox dd:hover .con1 {
+  background: url(../images/zxcon1a.png) no-repeat center;
+}
+.hgListBox dd:hover .con2 {
+  background: url(../images/zxcon2a.png) no-repeat center;
+}
+.hgListBox dd:hover .con3 {
+  background: url(../images/zxcon3a.png) no-repeat center;
+}
+.hgListBox dd:hover .con4 {
+  background: url(../images/zxcon4a.png) no-repeat center;
+}
+.hgListBox dd:hover .con5 {
+  background: url(../images/zxcon5a.png) no-repeat center;
+}
+
+.hgListBox dd .text {
+  font-size: 0.2rem;
+  margin-top: 0.16rem;
+  line-height: 2.2;
+}
+
+/*itese*/
+.nzhuyiwt {
+  padding-top: 0.95rem;
+  padding-bottom: 0.1rem;
+  background: url(../images/nzhuyiwt.jpg) no-repeat center top;
+}
+.nzhuyiwt .detail {
+  font-size: 0.22rem;
+  color: #787878;
+  padding-top: 0.15rem;
+}
+.nzhuyiwt ul.list {
+  overflow: hidden;
+  padding-top: 0.49rem;
+  text-align: center;
+  padding-bottom: 0.1rem;
+  line-height: 4.09rem;
+}
+
+.isliucheng {
+  background: #f7f7f7;
+  padding-top: 0.9rem;
+  > .wrap {
+    overflow: hidden;
+  }
+  .teseBox {
+    padding-top: 0.4rem;
+  }
+}
+.isliucheng ul.list li {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  width: 2.85rem;
+  height: 4.3rem;
+  cursor: pointer;
+  vertical-align: middle;
+  background: #fff;
+  margin: 0 0.05rem;
+}
+.isliucheng ul.list li img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.isliucheng ul.list li:hover img {
+  transform: rotateY(360deg);
+  -ms-transform: rotateY(360deg);
+  -webkit-transform: rotateY(360deg);
+}
+.isliucheng ul.list li p {
+  color: #888888;
+  font-size: 0.18rem;
+  padding-top: 0.04rem;
+  padding: 0.2rem 0.26rem 0;
+  line-height: 1.4;
+}
+.isliucheng ul.list li p span,
+.isliucheng ul.list li p font {
+  display: block;
+}
+.isliucheng ul.list li p span {
+  font-size: 0.4rem;
+  line-height: 1;
+  color: #4c4c4c;
+  padding-bottom: 0.15rem;
+  padding-top: 0.3rem;
+  color: #333333;
+  font-weight: normal;
+  position: relative;
+  margin-bottom: 0.12rem;
+  font-size: 0.24rem;
+}
+.isliucheng ul.list li p font {
+  color: #777777;
+  font-size: 0.16rem;
+  line-height: 0.25rem;
+  padding-top: 0.17rem;
+}
+.isliucheng ul.list li p span:after {
+  content: "";
+  display: block;
+  width: 0.3rem;
+  background: $zhu_color;
+  height: 0.02rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.isliucheng ul.list li:hover {
+  box-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.2);
+}
+
+/*iyoushisss*/
+.iyoushisss {
+  padding-top: 0.9rem;
+  .Box {
+    padding-top: 0.8rem;
+  }
+  .right {
+    width: 5.8rem;
+    h1 {
+      font-size: 0.24rem;
+      margin-bottom: 0.4rem;
+      p {
+        padding-top: 0.1rem;
+        color: #888;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+/* nzxLiuceng */
+.nzxLiuceng {
+  padding-top: 0.9rem;
+  padding-bottom: 0.5rem;
+}
+.nzxLiuceng .zxlcBox {
+  padding-top: 0.51rem;
+}
+.nzxLiuceng .zxlcBox ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 0.69rem;
+}
+.nzxLiuceng .zxlcBox li {
+  width: 1.2rem;
+  position: relative;
+}
+.nzxLiuceng .zxlcBox li span {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  text-align: center;
+  background: url(../images/azlccon1.png) no-repeat center;
+  font-size: 0.5rem;
+  font-family: arial;
+  color: #fa8032;
+}
+.nzxLiuceng .zxlcBox li:after {
+  content: "";
+  display: block;
+  width: 2.14rem;
+  height: 0.06rem;
+  background: url(../images/zxdian.jpg) no-repeat center;
+  position: absolute;
+  right: 1.33rem;
+  top: 50%;
+  margin-top: -0.24rem;
+}
+.nzxLiuceng .zxlcBox ul li:first-child:after {
+  display: none;
+}
+.nzxLiuceng .zxlcBox li p {
+  font-size: 0.26rem;
+  color: #2c2c2c;
+  line-height: 1;
+  padding-top: 0.14rem;
+  text-align: center;
+}
+.nzxLiuceng .zxlcBox li:hover span {
+  transform: rotateY(360deg);
+}
+
+/* 注销问题 */
+.nzxWenti .list li {
+  border: 0.01rem #f3f3f3 solid;
+}
+.nzxWenti .list li .Box h2 {
+  height: 0.6rem;
+  padding-left: 0.33rem;
+}
+.nzxWenti .list li .Box h2 .q {
+  margin-left: -0.33rem;
+}
+.nzxWenti .list li .Box h3 {
+  margin-top: 0.07rem;
+}
+.nzxWenti .zixunBtn {
+  width: 2.34rem;
+  height: 0.55rem;
+  line-height: 0.55rem;
+  background: #fa8032;
+  border-radius: 0.03rem;
+}
+
+/* 服务表单 */
+.nzcBanner .nfwForm {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -2.07rem;
+  width: 3.3rem;
+  height: 4.14rem;
+  background: #eaebed;
+  -webkit-border-radius: 0.08rem;
+  -moz-border-radius: 0.08rem;
+  border-radius: 0.08rem;
+}
+.nzcBanner .nfwForm .box {
+  padding: 0.2rem;
+  padding-top: 0.54rem;
+}
+.nfwForm .tit {
+  font-size: 0.2rem;
+  line-height: 1;
+}
+.nfwForm .formBox {
+  margin-top: 0.2rem;
+}
+.nfwForm .formBox input {
+  border: none;
+  width: 100%;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  margin-bottom: 0.15rem;
+  border-radius: 0.02rem;
+}
+.nfwForm .formBox .button {
+  cursor: pointer;
+  background: #fa8032;
+  color: #fff;
+  font-size: 0.18rem;
+}
+.nfwForm .formBox .button:hover {
+  background: #f1701d;
+}
+.nfwForm .formBox .txt {
+  text-indent: 0.15rem;
+  font-size: 0.15rem;
+}
+
+.nfwForm .lj {
+  line-height: 0.28rem;
+  padding-bottom: 0.1rem;
+  border-bottom: 0.01rem #cdcdce dashed;
+}
+
+.nfwForm .listBox {
+  margin-top: 0.1rem;
+  overflow: hidden;
+  height: 0.5rem;
+  position: relative;
+}
+.nfwForm .list {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.nfwForm .list li {
+  font-size: 0.13rem;
+  line-height: 0.24rem;
+  height: 0.24rem;
+  overflow: hidden;
+  color: #666666;
+}
+.nfwForm .danxuan {
+  line-height: 0.3rem;
+  margin-bottom: 0.1rem;
+}
+.nfwForm .danxuan .dxBox {
+  width: 1.13rem;
+  cursor: pointer;
+}
+.nfwForm .danxuan .dxBoxR {
+  margin-left: 0.2rem;
+}
+.nfwForm .danxuan .dxBox .quan {
+  width: 0.12rem;
+  height: 0.12rem;
+  margin-right: 0.05rem;
+  border: 0.01rem #a3a3a3 solid;
+  background: #fff;
+  border-radius: 50%;
+}
+.nfwForm .danxuan .dxBox.curr .quan {
+  width: 0.06rem;
+  height: 0.06rem;
+  border: 0.04rem #fa8032 solid;
+  color: #fa8032;
+}
+.nfwForm .danxuan .dxBox .dan {
+  width: 0.14rem;
+  height: 0.14rem;
+  vertical-align: middle;
+  margin-right: 0.05rem;
+  display: none;
+}
+
+/* nfuwu */
+.nfuwu {
+  padding-top: 0.89rem;
+}
+.nfuwu .fuwuBOx {
+  padding-top: 0.3rem;
+}
+.nfuwu .list {
+}
+.nfuwu .list li {
+  width: 2.4rem;
+  height: 1.4rem;
+  line-height: 1.4rem;
+  text-align: center;
+}
+.nfuwu .list li span {
+  font-size: 0.24rem;
+  display: block;
+  line-height: 1;
+  position: relative;
+  width: 0.36rem;
+  margin: 0 auto;
+}
+.nfuwu .list li span:before,
+.nfuwu .list li span:after {
+  content: "";
+  display: block;
+  width: 0.07rem;
+  height:1pex;
+  position: absolute;
+  top: 50%;
+  background: #333333;
+}
+.nfuwu .list li span:before {
+  left: -0.1rem;
+}
+.nfuwu .list li span:after {
+  right: -0.1rem;
+}
+.nfuwu .list li font {
+  font-size: 0.2rem;
+  display: block;
+  line-height: 1;
+  padding-top: 0.09rem;
+}
+.nfuwu .list li.curr {
+  color: #fff;
+}
+.nfuwu .list li.curr span:before,
+.nfuwu .list li.curr span:after {
+  background: #fff;
+}
+.nfuwu .list li.item2 {
+  background: url(../images/nfuwu1.jpg) no-repeat center;
+}
+.nfuwu .list li.item4 {
+  background: url(../images/nfuwu2.jpg) no-repeat center;
+}
+.nfuwu .list li.item6 {
+  background: url(../images/nfuwu3.jpg) no-repeat center;
+}
+.nfuwu .list li.item8 {
+  background: url(../images/nfuwu4.jpg) no-repeat center;
+}
+.nfuwu .list li.item10 {
+  background: url(../images/nfuwu5.jpg) no-repeat center;
+}
+
+.nfuwu .tel {
+  margin: 0.4rem auto 0;
+  width: 4.06rem;
+  height: 0.47rem;
+  line-height: 0.47rem;
+  border: 0.01rem #fa8032 solid;
+  border-radius: 0.04rem;
+  overflow: hidden;
+}
+.nfuwu .tel span {
+  float: left;
+  width: 1.29rem;
+  height: 0.47rem;
+  background: #fa8032;
+  color: #fff;
+  text-align: center;
+  margin-right: 0.2rem;
+}
+.nfuwu .tel font {
+  color: #fa8032;
+}
+
+/* nsschouhua */
+.nsschouhua {
+  margin-top: 0.4rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.54rem;
+  background: url(../images/csimgconbg3.jpg) no-repeat center top;
+}
+.nsschouhua .nsschBox {
+  padding-top: 0.32rem;
+}
+.nsschBox .list li {
+  margin-bottom: 0.15rem;
+}
+.nsschBox .list .left {
+  width: 3.4rem;
+  height: 1.8rem;
+  position: relative;
+}
+.nsschBox .list .left i {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  background: url(../images/csimgconbg.png) no-repeat center;
+  width: 1.44rem;
+  height: 0.41rem;
+  line-height: 0.38rem;
+  margin-left: -0.72rem;
+  font-size: 0.2rem;
+  color: #fff;
+  text-align: center;
+}
+.nsschBox .list .right {
+  border: 0.02rem #f5f5f5 solid;
+  border-left: none;
+  width: 8.58rem;
+  height: 1.78rem;
+}
+.nsschBox .list .right .box {
+  padding: 0.22rem 0.35rem;
+}
+.nsschBox .list .right p {
+  padding-bottom: 0.1rem;
+}
+
+/* nswfuwqfw */
+.nswfuwqfw {
+  background: url(../images/nswfuwqfw.jpg) no-repeat center top;
+  height: 6.68rem;
+}
+.nswfuwqfw h6 {
+  color: #fff;
+  font-size: 0.4rem;
+  line-height: 1;
+  padding-top: 1.07rem;
+}
+.nswfuwqfw .list {
+  padding-top: 1.1rem;
+}
+.nswfuwqfw .list li {
+  width: 2.98rem;
+  text-align-last: left;
+}
+.nswfuwqfw .list li h2 {
+  font-size: 0.35rem;
+  color: #b7bbcb;
+}
+.nswfuwqfw .list li h2 span {
+  font-size: 0.64rem;
+  line-height: 1;
+  color: #fff;
+  font-family: aril;
+}
+.nswfuwqfw .list li h3 {
+  font-size: 0.25rem;
+  color: #b7bbcb;
+  line-height: 1;
+  padding-top: 0.48rem;
+}
+.nswfuwqfw .list li h4 {
+  font-size: 0.16rem;
+  color: #b7bbcb;
+  line-height: 1.4;
+  padding-top: 0.26rem;
+}
+.nswfuwqfw .list li.item2 {
+  margin: 0 1.9rem 0 0.8rem;
+}
+
+/* nfuwuPk */
+.nfuwuPk {
+  padding-top: 0.92rem;
+}
+.nfuwuPk .nfwysBOx {
+  padding-top: 0.45rem;
+  height: 4.99rem;
+  position: relative;
+}
+.nfwysBOx .img {
+  display: block;
+  margin: 0 auto;
+}
+.nfwysBOx .more {
+  width: 2.04rem;
+  height: 0.49rem;
+  line-height: 0.49rem;
+  background: #fa8032;
+  color: #fff;
+  text-align: center;
+  display: block;
+  font-size: 0.2rem;
+  border-radius: 0.03rem;
+  position: absolute;
+  left: 50%;
+  margin-left: -1.02rem;
+  bottom: 0.2rem;
+  z-index: 2;
+  opacity: 1;
+  transition: all 0.2s;
+}
+.nfwysBOx .more:hover {
+  opacity: 0.8;
+}
+/* nhezuofangshis */
+.nhezuofangshis {
+  padding-bottom: 0.68rem;
+  padding-top: 0.93rem;
+}
+.nhezuofangshis .wubu {
+  padding-top: 0.64rem;
+}
+.nhezuofangshis .list li {
+  vertical-align: top;
+}
+.nhezuofangshis .list li.item {
+  width: 1.6rem;
+}
+.nhezuofangshis .list li.item2 {
+  width: 0.32rem;
+  background: url(../images/nhezuobg.jpg) no-repeat center;
+  height: 2.99rem;
+  margin: 0 0.23rem;
+}
+.nhezuofangshis .list li h2 {
+  padding-top: 0.28rem;
+}
+.nhezuofangshis .list li h3 {
+  color: #888888;
+  padding-top: 0.1rem;
+}
+.nhezuofangshis .list li:hover img {
+  transform: rotateY(360deg);
+}
+.nhezuofangshis .list li:hover h2,
+.nhezuofangshis .list li:hover h3 {
+  color: #ff6025;
+}
+
+/*****************
+************** 华丽的分割线 ***********
+*********************/
+.line_h_1 {
+  line-height: 1;
+}
+
+.nbanner {
+  height: 4.82rem;
+  line-height: 4.82rem;
+}
+.nbanner .box h1 {
+  font-size: 0.55rem;
+  line-height: 1;
+}
+.nbanner .box h2 {
+  font-size: 0.3rem;
+  line-height: 1;
+  margin-top: 0.23rem;
+}
+.nbanner .box h2 span {
+  background: #fff;
+  height:1pex;
+  width: 0.6rem;
+  vertical-align: middle;
+  margin: 0 0.19rem;
+}
+
+/* nabout */
+.nabout {
+  background: #f5f5f7;
+  padding-bottom: 1.4rem;
+}
+.nabout .textBt {
+  padding-top: 0.6rem;
+  padding-bottom: 1rem;
+}
+.nabout .textBt .item {
+  width: 1.7rem;
+  margin-left: 1.69rem;
+}
+.nabout .textBt .item:first-child {
+  margin-left: 0;
+}
+.textBt .item .shuzi {
+  font-size: 0.7rem;
+  line-height: 1;
+  position: relative;
+  float: left;
+}
+.textBt .item .shuzi:after {
+  content: "+";
+  display: block;
+  position: absolute;
+  font-size: 0.3rem;
+  right: -0.23rem;
+  top: 0;
+  line-height: 1;
+}
+.textBt .item .jieshao {
+  color: #464646;
+  font-size: 0.18rem;
+  line-height: 1;
+  float: left;
+  width: 100%;
+  padding-top: 0.08rem;
+}
+
+.nabout .iabout .img {
+  margin-top: -0.88rem;
+}
+.nabout .iabout .abtBox {
+  height: 4.28rem;
+}
+.nabout .iabout .info {
+  padding-top: 0.17rem;
+}
+/* nyewu */
+.nyewu {
+  height: 7.59rem;
+  background: url(../pic/naboutImg1.jpg) no-repeat center;
+}
+.nyewu .yewuBOx {
+  padding-top: 1.3rem;
+}
+.nyewu .nleft {
+  width: 3.26rem;
+}
+.nyewu .top {
+  padding-bottom: 0.81rem;
+}
+.nyewu .top h6 {
+  font-size: 0.28rem;
+  font-family: Arial;
+}
+.nyewu .top .tit {
+  font-size: 0.45rem;
+  padding-top: 0.1rem;
+}
+.nyewu .top h4 {
+  font-size: 0.18rem;
+  padding-top: 0.27rem;
+}
+
+.nyewu .nys {
+  font-size: 0.46rem;
+  line-height: 1;
+  margin-bottom: 0.63rem;
+}
+.nyewu .nys span {
+  font-size: 0.16rem;
+  padding-left: 0.14rem;
+  position: relative;
+}
+.nyewu .nys span:before {
+  content: "+";
+  position: absolute;
+  font-size: 0.25rem;
+  color: #fff;
+  left: 0.14rem;
+  top: -0.32rem;
+  font-weight: normal;
+}
+
+.nyewLists {
+  width: 8rem;
+}
+.nyewLists dd {
+  width: 1.6rem;
+  height: 1.65rem;
+  background: url(../pic/naboutbg.png) repeat;
+  float: left;
+}
+.nyewLists dd:nth-of-type(2n + 0) {
+  background: none;
+}
+.nyewLists dd .BOx {
+  padding-top: 0.39rem;
+}
+.nyewLists dd a {
+  color: #333333;
+}
+.nyewLists dd .con {
+  height: 0.56rem;
+  width: 0.84rem;
+  margin: 0 auto;
+  background: url(../pic/naboutcon.png) no-repeat left top;
+}
+.nyewLists dd .con2 {
+  background-position: -0.91rem 0rem;
+}
+.nyewLists dd .con3 {
+  background-position: -1.78rem 0rem;
+}
+.nyewLists dd .con4 {
+  background-position: -2.68rem 0rem;
+}
+.nyewLists dd .con5 {
+  background-position: -3.55rem 0rem;
+}
+.nyewLists dd .con6 {
+  background-position: -4.45rem 0rem;
+}
+.nyewLists dd .con7 {
+  background-position: -5.35rem 0rem;
+}
+.nyewLists dd .con8 {
+  background-position: -6.22rem 0rem;
+}
+.nyewLists dd .con9 {
+  background-position: -7.08rem 0rem;
+}
+.nyewLists dd .con10 {
+  background-position: -7.94rem 0rem;
+}
+.nyewLists dd .con11 {
+  background-position: -8.82rem 0rem;
+}
+.nyewLists dd .con12 {
+  background-position: -9.72rem 0rem;
+}
+.nyewLists dd .con13 {
+  background-position: -10.58rem 0rem;
+}
+.nyewLists dd .con14 {
+  background-position: -11.46rem 0rem;
+}
+.nyewLists dd .con15 {
+  background-position: -12.36rem 0rem;
+}
+.nyewLists dd:hover {
+  background: #fa8032;
+}
+.nyewLists dd:hover font {
+  color: #ffffff;
+}
+.nyewLists dd:hover .con1 {
+  background-position: left -0.56rem;
+}
+.nyewLists dd:hover .con2 {
+  background-position: -0.91rem -0.56rem;
+}
+.nyewLists dd:hover .con3 {
+  background-position: -1.78rem -0.56rem;
+}
+.nyewLists dd:hover .con4 {
+  background-position: -2.68rem -0.56rem;
+}
+.nyewLists dd:hover .con5 {
+  background-position: -3.55rem -0.56rem;
+}
+.nyewLists dd:hover .con6 {
+  background-position: -4.45rem -0.56rem;
+}
+.nyewLists dd:hover .con7 {
+  background-position: -5.35rem -0.56rem;
+}
+.nyewLists dd:hover .con8 {
+  background-position: -6.22rem -0.56rem;
+}
+.nyewLists dd:hover .con9 {
+  background-position: -7.08rem -0.56rem;
+}
+.nyewLists dd:hover .con10 {
+  background-position: -7.94rem -0.56rem;
+}
+.nyewLists dd:hover .con11 {
+  background-position: -8.82rem -0.56rem;
+}
+.nyewLists dd:hover .con12 {
+  background-position: -9.72rem -0.56rem;
+}
+.nyewLists dd:hover .con13 {
+  background-position: -10.58rem -0.56rem;
+}
+.nyewLists dd:hover .con14 {
+  background-position: -11.46rem -0.56rem;
+}
+.nyewLists dd:hover .con15 {
+  background-position: -12.36rem -0.56rem;
+}
+
+.nyewLists dd .text {
+  font-size: 0.18rem;
+  line-height: 2.2;
+  color: #8e96cc;
+  padding-top: 0.07rem;
+}
+
+/* nbanner2 */
+.nbanner2 {
+  height: 4.8rem;
+}
+
+.ndlserver {
+  background: #f8f8f8;
+  padding-bottom: 0.8rem;
+}
+
+.ndailiForm {
+  background: #fff;
+  position: relative;
+  border-radius: 0.08rem;
+  top: -0.38rem;
+  overflow: hidden;
+  .left {
+    float: left;
+    width: 4.95rem;
+    height: 3.38rem;
+    background: url(../images/renwu.png) no-repeat center bottom;
+    text-align: center;
+    h2 {
+      font-size: 0.3rem;
+      color: #2c2f42;
+      padding-top: 0.29rem;
+    }
+    p {
+      color: #888888;
+      padding-top: 0.04rem;
+    }
+  }
+}
+.ndailiForm .dbBox {
+  padding: 0.28rem 0.24rem 0.4rem;
+  width: 6.38rem;
+}
+.ndailiForm .dbBox h2 {
+  font-size: 0.25rem;
+  line-height: 1;
+  border-bottom: 0.01rem #e5e5e5 dashed;
+  padding-bottom: 0.2rem;
+  margin-bottom: 0.18rem;
+}
+.ndailiForm .formBox {
+  margin-top: 0.19rem;
+  textarea {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+    overflow: hidden;
+    text-align: left;
+    padding: 0.1rem;
+    border: 0.01rem solid #e5e5e5;
+    height: 0.9rem;
+    &:focus {
+      border-color: $zhu_color;
+    }
+  }
+}
+.ndailiForm .formBox input {
+  border: none;
+  width: 2.04rem;
+  height: 0.38rem;
+  line-height: 0.38rem;
+  margin-left: 0.1rem;
+  border-radius: 0.02rem;
+  float: left;
+}
+.ndailiForm .formBox input:first-child {
+  margin-left: 0;
+}
+.ndailiForm .formBox .button {
+  cursor: pointer;
+  background: #fa8032;
+  color: #fff;
+  font-size: 0.18rem;
+  width: 2.24rem;
+  height: 0.4rem;
+  width: 100%;
+  font-weight: bold;
+  line-height: 0.4rem;
+  margin-left: 0;
+}
+.ndailiForm .formBox .button:hover {
+  background: #f1701d;
+}
+.ndailiForm .formBox .txt {
+  text-indent: 0.38rem;
+  font-size: 0.15rem;
+  border: 0.01rem solid #e5e5e5;
+}
+.ndailiForm .formBox .man {
+  background: url(../images/nzc1.png) no-repeat 0.09rem center #fff;
+}
+.ndailiForm .formBox .adr {
+  background: url(../images/nzc2.png) no-repeat 0.09rem center #fff;
+}
+.ndailiForm .formBox .tel {
+  background: url(../images/nzc3.png) no-repeat 0.09rem center #fff;
+}
+.ndailiForm .ndlradioBox {
+  color: #666666;
+  line-height: 0.38rem;
+}
+.ndlradioBox font {
+  color: #1a1915;
+  height: 0.6rem;
+  font-size: 0.18rem;
+}
+.ndlradioBox span {
+  background: url(../pic/radiobg.png) no-repeat left 0.12rem;
+  padding-left: 0.2rem;
+  margin-right: 0.5rem;
+  margin-left: 0.2rem;
+  cursor: pointer;
+  font-size: 0.18rem;
+  color: $fu_color;
+}
+.ndlradioBox span.curr {
+  color: #fa8032;
+  background-position: left -0.2rem;
+}
+.ndailiForm .formBox input:focus {
+  border-color: #fa8032;
+}
+
+/*iliuchengs*/
+.iliuchengs {
+  background: url(../images/liuchengbg.jpg) no-repeat center #333;
+  padding: 0.58rem 0 0.57rem;
+  .ythTitl h2 {
+    color: #fff;
+  }
+  .ythTitl h3 {
+    color: $fu_color;
+  }
+  img {
+    display: block;
+    margin-top: 0.3rem;
+  }
+}
+
+/*资料准备*/
+.idata {
+  overflow: hidden;
+  width: 100%;
+}
+.idata .wrap {
+  height: 5.8rem;
+}
+
+.idata .left {
+  width: 6.67rem;
+  background: #fff;
+  padding-top: 0.39rem;
+}
+.idata .right {
+  width: 8.94rem;
+  background: url(../images/idatar.jpg) no-repeat left top;
+  height: 6.79rem;
+  padding-left: 0.95rem;
+  padding-top: 0.39rem;
+  position: absolute;
+  left: 6.67rem;
+  top: 0;
+}
+.idata .titl2 {
+  font-size: 0.35rem;
+  color: #000000;
+  font-weight: normal;
+}
+.idata .list {
+  padding-top: 0.23rem;
+}
+.idata .list li {
+  height: 0.46rem;
+  line-height: 0.46rem;
+}
+.idata .list li span {
+  float: left;
+  width: 0.26rem;
+  height: 0.26rem;
+  line-height: 0.26rem;
+  text-align: center;
+  background: #666666;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  color: #fff;
+  margin-top: 0.1rem;
+  margin-right: 0.12rem;
+  background: #2c2f42;
+}
+.idata .list li p {
+  float: left;
+  font-size: 0.2rem;
+}
+.idata .list li p font {
+  color: #fc8c43;
+}
+
+.shenfenzheng {
+  margin-top: 0.58rem;
+  margin-left: 0.25rem;
+}
+
+.idata .right .list li {
+  height: 0.4rem;
+  line-height: 0.4rem;
+}
+.idata .right .list li span {
+  margin-top: 0.07rem;
+}
+
+/* ndailiTitle */
+.ndailiTitle .p1 {
+  color: #ebeaea;
+  font-size: 0.45rem;
+}
+.ndailiTitle .p2 {
+  font-size: 0.35rem;
+  margin-top: -0.24rem;
+}
+
+.ndlservBox {
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+}
+.ndlservBox .list {
+  margin-top: 0.42rem;
+}
+.ndlservBox .list dd {
+  width: 5.84rem;
+  height: 4.6rem;
+  background: #fff;
+  margin-left: 0.3rem;
+}
+.ndlservBox .list dd:first-child {
+  margin-left: 0;
+}
+.ndlservBox .list .box {
+  padding: 0 0.2rem;
+  position: relative;
+}
+.ndlservBox .list .cont {
+  background: url(../images/changjanwenti.png) no-repeat center;
+  display: block;
+  width: 2.91rem;
+  height: 0.52rem;
+  line-height: 0.52rem;
+  text-align: center;
+}
+.ndlservBox .list .text {
+  height: 3.12rem;
+  line-height: 3.12rem;
+  padding-bottom: 0.25rem;
+  margin-top: 0.17rem;
+}
+
+.ndlservBox a.more {
+  display: block;
+  width: 1.3rem;
+  height: 0.38rem;
+  line-height: 0.38rem;
+  text-align: center;
+  color: #1a1915;
+  border-radius: 0.02rem;
+  border: 0.01rem #b5b5b5 solid;
+  margin: 0.22rem auto 0;
+}
+.ndlservBox a.more:hover {
+  background: #fa8032;
+  color: #fff;
+  border-color: #fa8032;
+}
+
+.ndlservBox .list .wenb {
+  line-height: 1.65;
+}
+
+/* ythTitl */
+.ythTitl {
+  text-align: center;
+}
+.ythTitl h2 {
+  font-size: 0.4rem;
+  color: #333;
+  font-weight: normal;
+  line-height: 1;
+  font-weight: bold;
+}
+.ythTitl h2 span {
+  font-weight: bold;
+}
+.ythTitl h2:before,
+.ythTitl h2:after {
+  content: "";
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  margin: 0 0.15rem;
+  width: 2.1rem;
+  height: 0.12rem;
+  vertical-align: middle;
+}
+.ythTitl h2:before {
+  background: url(../images/biaol.png) no-repeat right center;
+}
+.ythTitl h2:after {
+  background: url(../images/biaor.png) no-repeat right center;
+}
+.ythTitl h3 {
+  color: #8a8989;
+  line-height: 1;
+  padding-top: 0.11rem;
+  font-size: 0.2rem;
+}
+
+.ndlservBox {
+  h6 {
+    line-height: 0.36rem;
+    border-bottom: 0.01rem #e5e5e5 dashed;
+    a {
+      color: #888;
+      &:hover {
+        color: $zhu_color;
+      }
+    }
+  }
+}
+
+/*iadrs*/
+.iadrs {
+  padding-bottom: 0.6rem;
+  padding-top: 0.5rem;
+  .textBox {
+    padding-top: 0.28rem;
+  }
+}
+/* ndlwhy */
+.ndlwhy {
+  background: #242a49;
+  padding: 0.7rem 0 1.28rem;
+}
+
+.itableBOx {
+  margin-top: 0.3rem;
+}
+.itableBOx .left {
+  width: 2.42rem;
+  background: #384069;
+  position: relative;
+}
+.itableBOx .left .bgs {
+  width: 2.82rem;
+  height: 1rem;
+  background: #fa8032;
+  position: absolute;
+  left: 50%;
+  margin-left: -1.41rem;
+  top: 0;
+  z-index: 2;
+}
+.itableBOx .list {
+  position: relative;
+  z-index: 3;
+}
+.itableBOx li {
+  width: 100%;
+  height: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+.itableBOx li:before {
+  content: "";
+  display: block;
+  width: 2.14rem;
+  height:1pex;
+  background: #242a49;
+  position: absolute;
+  left: 50%;
+  margin-left: -1.07rem;
+  bottom: 0;
+}
+.itableBOx li:first-child {
+  margin-top: 0;
+}
+.itableBOx li h5 {
+  color: #fff;
+  line-height: 1rem;
+}
+.itableBOx li:hover:before {
+  display: none;
+}
+.itableBOx li span {
+  float: left;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-left: 0.24rem;
+  margin-top: 0.23rem;
+  margin-right: 0.13rem;
+}
+.itableBOx li.item1 span {
+  background: url(../pic/5.png) no-repeat center;
+}
+.itableBOx li.item2 span {
+  background: url(../pic/6.png) no-repeat center;
+}
+.itableBOx li.item3 span {
+  background: url(../pic/7.png) no-repeat center;
+}
+.itableBOx li.item4 span {
+  background: url(../pic/8.png) no-repeat center;
+}
+.itableBOx li.item5 span {
+  background: url(../pic/9.png) no-repeat center;
+}
+
+.itableBOx li:hover span {
+  transform: rotateZ(360deg);
+}
+
+.itableBOx .right {
+  width: 8.1rem;
+  height: 5.02rem;
+  line-height: 5.02rem;
+  overflow: hidden;
+  position: relative;
+}
+.itableBOx .right .img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 5.02rem;
+  color: #b4b9d6;
+}
+.itableBOx .right .img:first-child {
+  display: block;
+}
+.itableBOx .right .img img {
+  max-width: 100%;
+}
+.itableBOx .right dd {
+  height: 0.29rem;
+  line-height: 0.29rem;
+  padding-left: 0.16rem;
+  position: relative;
+}
+.itableBOx .right dl {
+  padding-top: 0.2rem;
+}
+.itableBOx .right dd:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0.08rem;
+  height: 0.08rem;
+  background: #b4b9d6;
+  border-radius: 0.08rem;
+  left: 0;
+  top: 50%;
+  margin-top: -0.04rem;
+}
+
+.dlTel {
+  height: 0.47rem;
+  line-height: 0.47rem;
+  border: 0.01rem #fa8032 solid;
+  border-radius: 0.06rem;
+  width: 4.07rem;
+  background: #fff;
+  margin-top: 0.36rem;
+}
+.dlTel span {
+  height: 0.47rem;
+  line-height: 0.47rem;
+  padding-left: 0.2rem;
+  color: #fa8032;
+}
+.dlTel font {
+  width: 1.29rem;
+  height: 0.47rem;
+  line-height: 0.47rem;
+  text-align: center;
+}
+/* ndlliucheng */
+.ndlliucheng {
+  background: #f8f8f8;
+  padding-bottom: 0.79rem;
+}
+
+.ndlliucheng ul.list {
+  overflow: hidden;
+  padding-top: 0.49rem;
+  text-align: center;
+  padding-bottom: 0.1rem;
+  line-height: 4.15rem;
+}
+.ndlliucheng ul.list li {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  width: 1.61rem;
+  height: 4.15rem;
+  cursor: pointer;
+  vertical-align: middle;
+  background: #fff;
+  margin: 0 0.03rem;
+}
+.ndlliucheng ul.list li .box {
+  padding: 0.15rem;
+}
+.ndlliucheng ul.list li img {
+  display: block;
+  margin: 0.17rem auto 0;
+  width: 100%;
+  border-radius: 0.04rem;
+  overflow: hidden;
+}
+
+.ndlliucheng ul.list li:hover img {
+  transform: rotateY(360deg);
+  -ms-transform: rotateY(360deg);
+  -webkit-transform: rotateY(360deg);
+}
+.ndlliucheng ul.list li p {
+  line-height: 1;
+  color: #333333;
+  font-size: 0.22rem;
+  font-weight: bold;
+}
+.ndlliucheng ul.list li p span {
+  display: block;
+}
+.ndlliucheng ul.list li p span {
+  font-size: 0.27rem;
+  line-height: 1;
+  color: #4c4c4c;
+  padding-bottom: 0.18rem;
+  padding-top: 0.2rem;
+  color: #333333;
+  font-weight: normal;
+}
+.ndlliucheng ul.list li:hover {
+  background: #ff8f00;
+}
+.ndlliucheng ul.list li:hover * {
+  color: #fff;
+}
+.ndlliucheng ul.list li:hover p span:after {
+  background: #fff;
+}
+.ndlliucheng ul.list li h6 {
+  color: #555555;
+  line-height: 1.7;
+  padding-top: 0.1rem;
+}
+/* ndlqitaserv */
+.ndlqitaserv {
+  background: #f8f8f8;
+  padding-bottom: 0.85rem;
+}
+.ndlqitaserv dl {
+  padding-top: 0.57rem;
+}
+.ndlqitaserv dd {
+  width: 1.83rem;
+  line-height: 0.5rem;
+  margin-left: 0.2rem;
+}
+.ndlqitaserv dd:first-child {
+  margin-left: 0;
+}
+.ndlqitaserv dd img {
+  width: 100%;
+  height: 1.74rem;
+}
+
+/*ifoots*/
+.ifoots {
+  padding: 0.3rem 0 0.35rem;
+  background: #2c2f42;
+  * {
+    color: $fu_color;
+  }
+  .left {
+    width: 4.69rem;
+    h3 {
+      margin-bottom: 0.15rem;
+    }
+    h4 {
+      font-size: 0.3rem;
+      line-height: 1;
+      p {
+        font-size: 0.16rem;
+        line-height: 1.4;
+        padding-top: 0.12rem;
+        font-weight: normal;
+      }
+      img {
+        float: right;
+        margin-left: 0.15rem;
+      }
+    }
+  }
+  .right {
+    width: 6.54rem;
+    padding-top: 0.3rem;
+    *::-webkit-input-placeholder {
+      color: #8289aa;
+    }
+    &.ndailiForm {
+      background: none;
+      border-radius: 0;
+      .inpName {
+        background: url(../images/btcon1.png) no-repeat 0.09rem center #383c52;
+      }
+      .inpTel {
+        background: url(../images/btcon2.png) no-repeat 0.09rem center #383c52;
+      }
+      .inpAddr {
+        background: url(../images/btcon3.png) no-repeat 0.09rem center #383c52;
+      }
+      input,
+      textarea {
+        background-color: #383c52;
+        border: none;
+        color: $fu_color;
+        width: 2.11rem;
+      }
+
+      textarea {
+        width: 100%;
+      }
+      .messageBtn {
+        width: 100%;
+        background-color: #fa8008;
+        color: #fff;
+      }
+    }
+  }
+}
+
+/******************************
+ ** by:554115339@qq.com
+ ******************************/
