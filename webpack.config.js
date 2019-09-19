@@ -16,8 +16,9 @@ module.exports = {
     devServer: {                     //开发服务器配置              
         port: 3008,                  //端口号
         progress: true,              //打包时是否出现 进度条
-        contentBase: './dist',     // 热跟新目录,启动一个 http://localhost:3003/ 打开指向 dist 目录
         open: true,                  //自动打开浏览器
+        contentBase: path.join(__dirname, "dist"),  //不写这个启动本地服务器，consle报错
+        // contentBase: './dist',     // 也可以这么写？热跟新目录,启动一个 http://localhost:3003/ 打开指向 dist 目录
     },
     module: {
         rules: [
