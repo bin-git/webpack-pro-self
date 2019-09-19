@@ -1,8 +1,10 @@
 let path = require('path');
-const htmlWebpackPlugin = require('html-webpack-plugin');   //  引入html-webpack-plugin插件
+const HtmlWebpackPlugin = require('html-webpack-plugin');   //  引入html-webpack-plugin插件
 const MiniCssExtractPlugin = require('mini-css-extract-plugin'); // 样式表抽离，没搞懂
 const devMode = process.env.NODE_ENV !== 'production'; // 判断当前环境是开发环境还是 部署环境，主要是 mode属性的设置值。
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');  //压缩css
+
+const webpack = require('webpack')
 
 // const { CleanWebpackPlugin } = require('clean-webpack-plugin'); //引入dist目录清理插件？有错？
 
@@ -19,52 +21,54 @@ module.exports = {
         open: true,                  //自动打开浏览器
         contentBase: path.join(__dirname, "dist"),  //不写这个启动本地服务器，consle报错
         // contentBase: './dist',     // 也可以这么写？热跟新目录,启动一个 http://localhost:3003/ 打开指向 dist 目录
+
+        hot: true, //开启热更新
     },
     module: {
         rules: [
+        {
+            test: /\.(sc|sa|c)ss$/,
+            use: [
             {
-                test: /\.(sc|sa|c)ss$/,
-                use: [
-                    {
-                        loader: 'style-loader'
-                    },
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            sourceMap: true
-                        }
-                    },
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            ident: 'postcss',
-                            sourceMap: true,
-                            plugins: loader => [
-                                require('autoprefixer')({ browsers: ['> 0.15% in CN'] }) // 添加前缀
-                            ]
-                        }
-                    },
-                    {
-                        loader: 'sass-loader',
-                        options: {
-                            sourceMap: true
-                        }
-                    }
-                ]
+                loader: 'style-loader'
             },
-
             {
-                test: /\.(png|svg|jpg|gif)$/,
-                use: [
+                loader: 'css-loader',
+                options: {
+                    sourceMap: true
+                }
+            },
+            {
+                loader: 'postcss-loader',
+                options: {
+                    ident: 'postcss',
+                    sourceMap: true,
+                    plugins: loader => [
+                                require('autoprefixer')({ browsers: ['> 0.15% in CN'] }) // 添加前缀
+                                ]
+                            }
+                        },
+                        {
+                            loader: 'sass-loader',
+                            options: {
+                                sourceMap: true
+                            }
+                        }
+                        ]
+                    },
+
                     {
+                        test: /\.(png|svg|jpg|gif)$/,
+                        use: [
+                        {
                         loader: 'url-loader',                  // 打包图片用的url-loader，也可使用file-loader，
                         options: {
                             limit: 8192,                      // 打包css的图片，图片大小小于limit设置的8192B的会转化成base字符串引入，减少请求
                             outputPath: './images/'             //打包后的图片放在指定目录下
                         }
                     }
-                ]
-            },
+                    ]
+                },
             // js处理模块!!!!有问题报错。
             // {
             //     test: /\.js$/,
@@ -86,22 +90,35 @@ module.exports = {
             //     ]
             // }
 
-        ]
-    },
+            ]
+        },
     plugins: [   // 打包需要的各种插件
 
         new MiniCssExtractPlugin({                                   // 提取样式
             filename: devMode ? '[name].css' : '[name].[hash].css', // 设置最终输出的文件名
             chunkFilename: devMode ? '[id].css' : '[id].[hash].css'
-        })
+        }),
+        new HtmlWebpackPlugin({                 
+            template: path.resolve(__dirname,'src/index.html'),
+            filename: 'index.html',
+            inject: 'body'
+        }),
 
-        // new htmlWebpackPlugin({             // 打包HTML
+        //启动热更新
+    new webpack.HotModuleReplacementPlugin(),
+    //在console中显示更新的模块
+    new webpack.NamedModulesPlugin(),
+
+
+        // new HtmlWebpackPlugin({             // 打包HTML
         //     template: './src/index.html'   //  HTML模板路径
         // })
+
         // new CleanWebpackPlugin(),       //清理dist目录
-    ],
-    optimization: {
-        minimizer: [new OptimizeCSSAssetsPlugin({})]
-    },
+        ],
+        
+        optimization: {
+            minimizer: [new OptimizeCSSAssetsPlugin({})]
+        },
     watch: true   // 监听修改自动打包
 }

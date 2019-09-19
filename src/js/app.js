@@ -5,7 +5,6 @@ import jqueryjs from './jquery-1.9.1.min.js';
 import aosjs from '../dist/aos.js';
 
 
-
 $(function () {
     iscroll();//注册滚动
     nfuwuForm();//服务留言提交
