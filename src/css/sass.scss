@@ -7,7 +7,7 @@ $fu_color: #7e85a5;
 }
 
 .itop {
-  height: 0.9rem;
+  height: 1rem;
   background: #fff;
   display: flex;
 }
@@ -36,7 +36,7 @@ $fu_color: #7e85a5;
   line-height: 0.3rem;
   background: #fff;
   text-align: center;
-  margin-top:1pex;
+  margin-top: 1pex;
 }
 .itop .itel font {
   width: 0.8rem;
@@ -46,12 +46,11 @@ $fu_color: #7e85a5;
 }
 
 .xiaNav {
-  height: 0.55rem;
-  line-height: 0.55rem;
   color: #fff;
   background: #11131c;
   text-indent: 0.25rem;
   border-radius: 0.02rem;
+  padding-top: 0.3rem;
 
   .left {
     width: 2.55rem;
@@ -97,104 +96,86 @@ $fu_color: #7e85a5;
   color: #fa8032;
 }
 
-/* ibanner */
-.ibanner {
-  height: 4.5rem;
-  background: url(../images/ibanner.jpg) no-repeat center #eee;
-
-  .wrap {
-    height: 4.5rem;
-    a.bnlink {
-      display: block;
-      width: 3.86rem;
-      height: 0.81rem;
-      position: absolute;
-      left: 5.28rem;
-      top: 2.6rem;
-      z-index: 3;
-    }
-  }
+/*首页导航*/
+.inav.curr {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 400;
+}
+.inav .list {
+}
+.inav .list dd {
+  float: left;
+  width: 25%;
+  position: relative;
+  border-right: 1px #f78827 solid;
+  border-bottom: 1px #f78827 solid;
+}
+.inav .list dd:nth-child(4) ~ dd {
+  border-bottom: none;
+}
+.inav .list a {
+  display: block;
+  height: 0.7rem;
+  line-height: 0.7rem;
+  color: #fff;
+  text-align: center;
+}
+.inav .list a:active {
+  background: #858383;
 }
 
-.ibnNav {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 2.55rem;
+/* banner */
+.banner {
   height: 4.5rem;
-  background: #0e101c;
+  width: 100%;
+}
+
+.ibanner > .wrap {
+  width: 100%;
+}
+.ibnNav {
+  background: #404040;
   color: #fff;
-  z-index: 20;
+  margin-top: 0.3rem;
 }
 .ibnNav .box {
-  padding: 0.24rem 0.25rem 0;
+  text-align: center;
 }
 .ibnNav .box dl {
-  padding-left: 0.5rem;
-  padding-bottom: 0.32rem;
-  padding-top: 0.32rem;
-
-  background: url(../images/con1.png) no-repeat left 0.33rem;
-  position: relative;
-  z-index: 21;
-  width: 1.8rem;
-  &:before {
-    content: "";
-    display: block;
-    position: absolute;
-    border-bottom: 0.01rem #626263 solid;
-    left: 0;
-    bottom: 0;
-    width: 2.05rem;
-  }
-  .dorp {
-    width: 4.15rem;
-    position: absolute;
-    left: 2.3rem;
-    top: 0;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 0.24rem 0.3rem;
-    z-index: 22;
-
-    * {
-      color: #fff;
-    }
-    h1 {
-      font-size: 0.16rem;
-      line-height: 1;
-      margin-bottom: 0.24rem;
-    }
-    a {
-      display: block;
-      line-height: 0.29rem;
-      border-bottom: 0.01rem $fu_color dashed;
-      
-      &:hover * {
-        color: $zhu_color;
-      }
-    }
-  }
-  &:hover .dorp {
-    display: block;
-  }
+  display: inline-block;
+  vertical-align: top;
+  width: 2.4rem;
+  text-align: left;
+  padding-left: 0.8rem;
+  padding-bottom: 0.26rem;
+  padding-top: 0.26rem;
+  background: url(../images/con1.png) no-repeat left 0.26rem;
+  background-size: 0.7rem;
 }
 .ibnNav .box dl:first-child + dl {
-  background: url(../images/con3.png) no-repeat left 0.33rem;
+  width: 2.7rem;
+  background: url(../images/con3.png) no-repeat left 0.26rem;
+  background-size: 0.56rem;
 }
 .ibnNav .box dl:first-child + dl + dl {
-  background: url(../images/con2.png) no-repeat left 0.33rem;
+  width: 2.1rem;
+  background: url(../images/con2.png) no-repeat left 0.26rem;
+  background-size: 0.62rem;
 }
 .ibnNav .box dl dt {
   width: 100%;
+  font-size: 0.28rem;
 }
 .ibnNav .box dl dd {
-  margin-right: 0.1rem;
+  margin-right: 0.08rem;
+}
+.ibnNav .box dl dd a {
+  color: #bfbfbf;
 }
 
-.ibnNav .box dl dd a {
-  color: #d5d5d5;
-  
-}
 /* iadvs */
 .iadvs {
   background: #fff;
@@ -256,7 +237,7 @@ $fu_color: #7e85a5;
   content: "";
   display: block;
   width: 0.44rem;
-  height:1pex;
+  height: 1pex;
   background: #b3b4d1;
   position: absolute;
   left: 0;
@@ -306,7 +287,7 @@ $fu_color: #7e85a5;
 .ifuwuItem2 .zixun {
   display: block;
   margin: 0.34rem auto 0;
-  font-size: 0.2rem;
+  font-size: 0.24rem;
   border: 0.01rem #b5b5b5 solid;
   width: 1.24rem;
   height: 0.36rem;
@@ -347,7 +328,7 @@ $fu_color: #7e85a5;
   margin-bottom: 0.38rem;
 }
 .ikuanjiAdv h2 span {
-  font-size: 0.2rem;
+  font-size: 0.24rem;
   color: #666666;
   font-weight: normal;
 }
@@ -452,7 +433,7 @@ $fu_color: #7e85a5;
   background-position: -9.73rem -0.06rem;
 }
 .youshiBox dd h2 {
-  font-size: 0.2rem;
+  font-size: 0.24rem;
   line-height: 1;
   padding-top: 0.28rem;
   position: relative;
@@ -544,7 +525,7 @@ $fu_color: #7e85a5;
   padding-top: 0.38rem;
 }
 .zcForm .tit {
-  font-size: 0.2rem;
+  font-size: 0.24rem;
   line-height: 1;
 }
 .zcForm .formBox {
@@ -623,7 +604,7 @@ $fu_color: #7e85a5;
 .nadvs .item img {
 }
 .nadvs h2 {
-  font-size: 0.2rem;
+  font-size: 0.24rem;
   color: #333;
   line-height: 1;
   padding-left: 0.6rem;
@@ -850,76 +831,58 @@ $fu_color: #7e85a5;
   padding-top: 0.15rem;
   font-weight: normal;
 }
+
 /*资料准备*/
-.idata {
-  overflow: hidden;
-  width: 100%;
-}
-.idata .wrap {
-  height: 5.8rem;
-}
+.idata{overflow: hidden; width: 100%; background: #fff;}
+.idata .wrap{  }
 
-.idata .left {
-  width: 6.67rem;
-  background: #fff;
-  padding-top: 0.74rem;
+.idata h6{ padding-left: .2rem;font-size: .29rem; }
+.idata .left{ background: #fff;
+	padding-top: 0.64rem;
 }
-.idata .right {
-  width: 8.94rem;
-  background: url(../images/idatar.jpg) no-repeat left top;
-  height: 6.79rem;
-  padding-left: 0.95rem;
-  padding-top: 0.74rem;
-  position: absolute;
-  left: 6.67rem;
-  top: 0;
+.idata .right{ 
+	background: url(../images/idatar.jpg) no-repeat left top;
+	background-size: cover;
+	padding:0 .15rem;
+	padding-top: 0.5rem;
+	padding-bottom: .5rem;
+	margin:0.3rem -.15rem 0; position: relative;
 }
-.idata .titl2 {
-  font-size: 0.35rem;
-  color: #000000;
+.idata .right .img{  
+	width: 1.9rem;
+	position: absolute;
+	    right: 1.1rem;
+    bottom: .2rem;
 }
-.idata .list {
-  padding-top: 0.23rem;
+.idata .titl2{ font-size: 0.42rem;color: #000000;
+	padding-left:.2rem;
 }
-.idata .list li {
-  height: 0.46rem;
-  line-height: 0.46rem;
+.idata .list{ padding-top: 0.27rem; padding-left: .2rem;}
+.idata .list li{   line-height: 0.55rem; overflow: hidden; 
+	margin-bottom: 0.12rem;
 }
-.idata .list li span {
-  float: left;
-  width: 0.26rem;
-  height: 0.26rem;
-  line-height: 0.26rem;
-  text-align: center;
-  background: #666666;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  color: #fff;
-  margin-top: 0.1rem;
-  margin-right: 0.12rem;
-  background: #2c2f42;
+.idata .list li span{ 
+	float: left; width: 0.42rem; height: 0.42rem; 
+	line-height: 0.42rem;text-align: center; 
+	background: #666666;
+	border-radius: 50%;
+	color: #fff;
+	margin-top: 0.03rem;
+	margin-right: 0.15rem;
 }
-.idata .list li p {
-  float: left;
-  font-size: 0.2rem;
+.idata .list li p{ float: left;  font-size: 0.29rem;
+	width:6.3rem; padding-left: .05rem;     line-height: 1.6;
 }
-.idata .list li p font {
-  color: #fc8c43;
-}
+.idata .list li p font{  color: #fc8c43;}
 
-.shenfenzheng {
-  margin-top: 0.2rem;
-  margin-left: 0.25rem;
+.shenfenzheng{ display: block;
+	width: 7rem;margin: 0 auto;margin-top: 0.24rem;  
 }
+.sfztext{ color: #b5b4b4;font-size: .2rem; line-height: 1.5;
+	padding:0 .24rem;
+	padding-top: .1rem;
+ }
 
-.idata .right .list li {
-  height: 0.4rem;
-  line-height: 0.4rem;
-}
-.idata .right .list li span {
-  margin-top: 0.07rem;
-}
 
 /*iyoushi3*/
 .iyoushi3 {
@@ -1002,7 +965,6 @@ $fu_color: #7e85a5;
     text-align: center;
     margin-right: 0.11rem;
     display: inline-block;
-    
   }
   .q {
     background: $zhu_color;
@@ -1070,7 +1032,7 @@ $fu_color: #7e85a5;
   background: url(../images/zczxbg2.png) no-repeat center;
 }
 .izczxListBox dd .text {
-  font-size: 0.2rem;
+  font-size: 0.24rem;
   line-height: 1.3;
   margin-top: 0.02rem;
 }
@@ -1205,7 +1167,7 @@ $fu_color: #7e85a5;
 }
 
 .conListBox dd .text {
-  font-size: 0.2rem;
+  font-size: 0.24rem;
   line-height: 2.2;
 }
 
@@ -1340,7 +1302,7 @@ $fu_color: #7e85a5;
 }
 
 .hgListBox dd .text {
-  font-size: 0.2rem;
+  font-size: 0.24rem;
   margin-top: 0.16rem;
   line-height: 2.2;
 }
@@ -1554,7 +1516,7 @@ $fu_color: #7e85a5;
   padding-top: 0.54rem;
 }
 .nfwForm .tit {
-  font-size: 0.2rem;
+  font-size: 0.24rem;
   line-height: 1;
 }
 .nfwForm .formBox {
@@ -1667,7 +1629,7 @@ $fu_color: #7e85a5;
   content: "";
   display: block;
   width: 0.07rem;
-  height:1pex;
+  height: 1pex;
   position: absolute;
   top: 50%;
   background: #333333;
@@ -1679,7 +1641,7 @@ $fu_color: #7e85a5;
   right: -0.1rem;
 }
 .nfuwu .list li font {
-  font-size: 0.2rem;
+  font-size: 0.24rem;
   display: block;
   line-height: 1;
   padding-top: 0.09rem;
@@ -1757,7 +1719,7 @@ $fu_color: #7e85a5;
   height: 0.41rem;
   line-height: 0.38rem;
   margin-left: -0.72rem;
-  font-size: 0.2rem;
+  font-size: 0.24rem;
   color: #fff;
   text-align: center;
 }
@@ -1839,7 +1801,7 @@ $fu_color: #7e85a5;
   color: #fff;
   text-align: center;
   display: block;
-  font-size: 0.2rem;
+  font-size: 0.24rem;
   border-radius: 0.03rem;
   position: absolute;
   left: 50%;
@@ -1909,7 +1871,7 @@ $fu_color: #7e85a5;
 }
 .nbanner .box h2 span {
   background: #fff;
-  height:1pex;
+  height: 1pex;
   width: 0.6rem;
   vertical-align: middle;
   margin: 0 0.19rem;
@@ -2146,122 +2108,94 @@ $fu_color: #7e85a5;
   padding-bottom: 0.8rem;
 }
 
+/*iform*/
+
 .ndailiForm {
   background: #fff;
-  position: relative;
-  border-radius: 0.08rem;
-  top: -0.38rem;
+  border-radius: 0.06rem;
   overflow: hidden;
-  .left {
-    float: left;
-    width: 4.95rem;
-    height: 3.38rem;
-    background: url(../images/renwu.png) no-repeat center bottom;
-    text-align: center;
-    h2 {
-      font-size: 0.3rem;
-      color: #2c2f42;
-      padding-top: 0.29rem;
-    }
-    p {
-      color: #888888;
-      padding-top: 0.04rem;
-    }
-  }
 }
 .ndailiForm .dbBox {
-  padding: 0.28rem 0.24rem 0.4rem;
-  width: 6.38rem;
+  padding: 0.42rem 0.36rem 0.61rem;
 }
 .ndailiForm .dbBox h2 {
-  font-size: 0.25rem;
+  font-size: 0.38rem;
   line-height: 1;
-  border-bottom: 0.01rem #e5e5e5 dashed;
-  padding-bottom: 0.2rem;
-  margin-bottom: 0.18rem;
+  border-bottom: 1px #e5e5e5 dashed;
+  padding-bottom: 0.31rem;
+  margin-bottom: 0.27rem;
 }
 .ndailiForm .formBox {
-  margin-top: 0.19rem;
-  textarea {
-    float: left;
-    width: 100%;
-    box-sizing: border-box;
-    margin-top: 0.1rem;
-    margin-bottom: 0.1rem;
-    overflow: hidden;
-    text-align: left;
-    padding: 0.1rem;
-    border: 0.01rem solid #e5e5e5;
-    height: 0.9rem;
-    &:focus {
-      border-color: $zhu_color;
-    }
-  }
+  margin-top: 0.29rem;
 }
 .ndailiForm .formBox input {
   border: none;
-  width: 2.04rem;
-  height: 0.38rem;
-  line-height: 0.38rem;
-  margin-left: 0.1rem;
-  border-radius: 0.02rem;
-  float: left;
-}
-.ndailiForm .formBox input:first-child {
-  margin-left: 0;
+  width: 100%;
+  height: 0.64rem;
+  line-height: 0.64rem;
+  margin-bottom: 0.2rem;
+  border-radius: 0.04rem;
 }
 .ndailiForm .formBox .button {
   cursor: pointer;
   background: #fa8032;
   color: #fff;
-  font-size: 0.18rem;
-  width: 2.24rem;
-  height: 0.4rem;
-  width: 100%;
-  font-weight: bold;
-  line-height: 0.4rem;
-  margin-left: 0;
+  height: 0.64rem;
+  margin-top: 0.04rem;
 }
 .ndailiForm .formBox .button:hover {
   background: #f1701d;
 }
 .ndailiForm .formBox .txt {
-  text-indent: 0.38rem;
-  font-size: 0.15rem;
-  border: 0.01rem solid #e5e5e5;
+  text-indent: 0.58rem;
+  border: 1px solid #e5e5e5;
 }
 .ndailiForm .formBox .man {
-  background: url(../images/nzc1.png) no-repeat 0.09rem center #fff;
+  background: url(../images/nzc1.png) no-repeat 0.13rem center #fff;
+  background-size: 0.26rem;
 }
 .ndailiForm .formBox .adr {
-  background: url(../images/nzc2.png) no-repeat 0.09rem center #fff;
+  background: url(../images/nzc2.png) no-repeat 0.13rem center #fff;
+  background-size: 0.29rem;
 }
 .ndailiForm .formBox .tel {
-  background: url(../images/nzc3.png) no-repeat 0.09rem center #fff;
+  background: url(../images/nzc3.png) no-repeat 0.13rem center #fff;
+  background-size: 0.22rem;
 }
 .ndailiForm .ndlradioBox {
   color: #666666;
-  line-height: 0.38rem;
+  line-height: 0.58rem;
 }
 .ndlradioBox font {
   color: #1a1915;
-  height: 0.6rem;
-  font-size: 0.18rem;
 }
 .ndlradioBox span {
-  background: url(../pic/radiobg.png) no-repeat left 0.12rem;
-  padding-left: 0.2rem;
-  margin-right: 0.5rem;
-  margin-left: 0.2rem;
+  background: url(../pic/radiobg.png) no-repeat left 0.17rem;
+  background-size: 0.26rem;
+  padding-left: 0.42rem;
+  margin-right: 0.27rem;
+  margin-left: 0.31rem;
   cursor: pointer;
-  font-size: 0.18rem;
-  color: $fu_color;
 }
 .ndlradioBox span.curr {
   color: #fa8032;
-  background-position: left -0.2rem;
+  background-position: left -0.43rem;
 }
 .ndailiForm .formBox input:focus {
+  border-color: #fa8032;
+}
+.ndailiForm .formBox textarea {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 0.09rem;
+  margin-bottom: 0.09rem;
+  overflow: hidden;
+  text-align: left;
+  padding: 0.09rem;
+  border: 0.01rem solid #e5e5e5;
+  height: 1.3rem;
+}
+.ndailiForm .formBox textarea:focus {
   border-color: #fa8032;
 }
 
@@ -2279,78 +2213,6 @@ $fu_color: #7e85a5;
     display: block;
     margin-top: 0.3rem;
   }
-}
-
-/*资料准备*/
-.idata {
-  overflow: hidden;
-  width: 100%;
-}
-.idata .wrap {
-  height: 5.8rem;
-}
-
-.idata .left {
-  width: 6.67rem;
-  background: #fff;
-  padding-top: 0.39rem;
-}
-.idata .right {
-  width: 8.94rem;
-  background: url(../images/idatar.jpg) no-repeat left top;
-  height: 6.79rem;
-  padding-left: 0.95rem;
-  padding-top: 0.39rem;
-  position: absolute;
-  left: 6.67rem;
-  top: 0;
-}
-.idata .titl2 {
-  font-size: 0.35rem;
-  color: #000000;
-  font-weight: normal;
-}
-.idata .list {
-  padding-top: 0.23rem;
-}
-.idata .list li {
-  height: 0.46rem;
-  line-height: 0.46rem;
-}
-.idata .list li span {
-  float: left;
-  width: 0.26rem;
-  height: 0.26rem;
-  line-height: 0.26rem;
-  text-align: center;
-  background: #666666;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  color: #fff;
-  margin-top: 0.1rem;
-  margin-right: 0.12rem;
-  background: #2c2f42;
-}
-.idata .list li p {
-  float: left;
-  font-size: 0.2rem;
-}
-.idata .list li p font {
-  color: #fc8c43;
-}
-
-.shenfenzheng {
-  margin-top: 0.58rem;
-  margin-left: 0.25rem;
-}
-
-.idata .right .list li {
-  height: 0.4rem;
-  line-height: 0.4rem;
-}
-.idata .right .list li span {
-  margin-top: 0.07rem;
 }
 
 /* ndailiTitle */
@@ -2440,7 +2302,7 @@ $fu_color: #7e85a5;
   zoom: 1;
   *display: inline;
   margin: 0 0.15rem;
-  width: 2.1rem;
+  width: 1rem;
   height: 0.12rem;
   vertical-align: middle;
 }
@@ -2454,7 +2316,7 @@ $fu_color: #7e85a5;
   color: #8a8989;
   line-height: 1;
   padding-top: 0.11rem;
-  font-size: 0.2rem;
+  font-size: 0.24rem;
 }
 
 .ndlservBox {
@@ -2469,6 +2331,14 @@ $fu_color: #7e85a5;
     }
   }
 }
+/*iserverce title*/
+.iserverce .ythTitl {
+  h2:before,
+  h2:after {
+    width: 0.7rem;
+    background-size: 3rem 0.12rem;
+  }
+}
 
 /*iadrs*/
 .iadrs {
@@ -2476,8 +2346,20 @@ $fu_color: #7e85a5;
   padding-top: 0.5rem;
   .textBox {
     padding-top: 0.28rem;
+    table {
+      td {
+
+        width: 100%;
+        padding: 0.05rem 0;
+        padding-left: 3em;text-indent: -3em;
+        span {
+          font-weight: bold;
+        }
+      }
+    }
   }
 }
+
 /* ndlwhy */
 .ndlwhy {
   background: #242a49;
@@ -2516,7 +2398,7 @@ $fu_color: #7e85a5;
   content: "";
   display: block;
   width: 2.14rem;
-  height:1pex;
+  height: 1pex;
   background: #242a49;
   position: absolute;
   left: 50%;

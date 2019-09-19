@@ -1,11 +1,10 @@
 import '../css/sass.scss';
-import '../dist/aos.css';
 
 import jqueryjs from './jquery-1.9.1.min.js';
-import aosjs from '../dist/aos.js';
 
 
 $(function () {
+    topScroll();//固定头部
     iscroll();//注册滚动
     nfuwuForm();//服务留言提交
     message("#iforms1");
@@ -15,6 +14,22 @@ $(function () {
 })
 
 
+function topScroll() {
+    var oBnerHeigt = $("#iNav").offset().top;
+    $(window).scroll(function() {
+        if ($(window).scrollTop() >= oBnerHeigt) {
+            $("#iNav").addClass('curr');
+            $("body").css({
+                paddingTop:$("#iNav").outerHeight(true)
+            })
+        } else {
+            $("#iNav").removeClass('curr');
+            $("body").css({
+                paddingTop:0
+            })
+        }
+    })
+}
 
 function iscroll() {
     var Box = $("#nzcScroll"),
