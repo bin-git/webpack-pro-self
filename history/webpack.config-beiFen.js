@@ -4,7 +4,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin'); // 提取样式
 const extractTextPlugin = require("extract-text-webpack-plugin"); //用来抽离单独抽离css文件
 const devMode = process.env.NODE_ENV !== 'production'; // 判断当前环境是开发环境还是 部署环境，主要是 mode属性的设置值。
 
-
+// const TerserJSPlugin = require('terser-webpack-plugin');
+// const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');//主要用于压缩css、去重
 
 const webpack = require('webpack');         //热更新用
 
@@ -12,7 +13,7 @@ const webpack = require('webpack');         //热更新用
 const { CleanWebpackPlugin } = require("clean-webpack-plugin"); //引入dist目录清理插件？有错？
 
 module.exports = {
-    mode: 'production',            //打包后的模式，有两种：production 默认生产模式（该模式自动压缩代码）   development开发模式
+    mode: 'development',            //打包后的模式，有两种：production 默认生产模式   development开发模式
     entry: "./src/js/app.js",       //入口文件
     output: {                      //出口
         filename: 'bundle.js',      // 打包后的文件名，所有依赖模块合并到此
@@ -96,16 +97,16 @@ module.exports = {
 
 
             // 样式表抽离成专门的单独文件并且设置版本号，抽取了样式，
-            //就不能再用 style-loader注入到 html 中了。开发模式不要开启，观察下开启后是否无法映射到sass
-            {
-                test: /\.(sa|sc|c)ss$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    'css-loader',
-                    'postcss-loader',
-                    'sass-loader'
-                ]
-            }
+            //就不能再用 style-loader注入到 html 中了。开发模式不要开启，开启后无法映射到sass
+            // {
+            //     test: /\.(sa|sc|c)ss$/,
+            //     use: [
+            //         MiniCssExtractPlugin.loader,
+            //         'css-loader',
+            //         'postcss-loader',
+            //         'sass-loader'
+            //     ]
+            // }
 
         ]
     },
@@ -134,5 +135,8 @@ module.exports = {
 
         new CleanWebpackPlugin(),      //清理dist目录
     ],
+    optimization: {
+        //minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
+      },
     watch: true   // 监听修改自动打包
 }

@@ -5,7 +5,6 @@ import jqueryjs from './jquery-1.9.1.min.js';
 
 $(function () {
     topScroll();//固定头部
-    iscroll();//注册滚动
     nfuwuForm();//服务留言提交
     message("#iforms1");
     message("#iforms2");
@@ -30,6 +29,8 @@ function topScroll() {
         }
     })
 }
+
+console.log("%c by:554115339@qq.com\n", 'background-image: -webkit-linear-gradient(left, #3498db, #f47920 10%, #d71345 20%, #f7acbc 30%, #ffd400 40%, #3498db 50%, #f47920 60%, #d71345 70%, #f7acbc 80%, #ffd400 90%, #3498db);color: transparent;-webkit-text-fill-color: transparent;-webkit-background-clip: text;background-size: 200% 100%;animation: masked-animation 4s infinite linear;font-size:18px;font-family:"微软雅黑",Microsoft YaHei;'),
 
 function iscroll() {
     var Box = $("#nzcScroll"),
@@ -62,8 +63,6 @@ function nfuwuForm() {
 
     })
 }
-
-
 
 
 
